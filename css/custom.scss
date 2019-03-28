@@ -1,0 +1,586 @@
+/* Scss Document */
+
+@import url("https://use.typekit.net/dpv5gwp.css");
+
+/*IMAGES*/
+
+$greengraphic: "../images/loginbg.jpg";
+$successgraphic: "../images/success.jpg";
+$registergraphic: "../images/register.jpg";
+
+
+/* Body Setup */
+body, html {
+	height: 100%;
+}
+
+
+/* COLORS */
+
+  $maingreen: #83bf4a;
+  $mainblue:  #0c293d;
+  $medblue: #4584b5;
+  $ltblue: #94c8d5;
+  $greenblue: #35858e;
+  $ltgrey: #d6d7dd;
+  $dkgrey: #434c55;
+
+/* Buttons */
+
+// Regular
+
+.btn-maingreen{
+	background-color: $maingreen!important;
+	color: white;
+}
+
+.btn-mainblue{
+	background-color: $mainblue!important;
+	color: white;
+}
+
+// Outline
+	  
+.btn-maingreen-outline {
+	background-color: white;
+	border: 1px solid $maingreen!important;
+	color: $maingreen;
+}
+
+.btn-mainblue-outline {
+	background-color: white;
+	border: 1px solid $mainblue!important;
+	color: $mainblue;
+}
+
+
+
+/**************************** FONTS **************************/
+
+h1, h2, h3, h4, h5, h6{
+	font-family: forma-djr-text, sans-serif;
+	font-weight: 700;
+}
+
+p {
+	font-family: proxima-nova, sans-serif;
+	font-weight: 300;
+}
+
+a {
+	text-decoration: none;
+	color: $mainblue;
+	&:hover{
+		color: lighten( $mainblue, 20% );
+		text-decoration: none;
+	}
+	
+}
+
+
+/************************* Navbar *****************************/
+.navbar.navlogin.navbar-default {
+	margin-bottom: 0px;
+}
+nav{
+	font-family: forma-djr-text, sans-serif;
+		font-weight: 300;
+	-webkit-box-shadow: 7px 9px 16px 1px rgba(0,0,0,0.27);
+	-moz-box-shadow: 7px 9px 16px 1px rgba(0,0,0,0.27);
+	box-shadow: 7px 9px 16px 1px rgba(0,0,0,0.27);
+}
+
+.navbar{
+	padding-top: 11px;
+}
+.nav-link{
+	color: $mainblue;
+	font-weight: 400;
+	&:hover {
+        color: lighten( $mainblue, 30% );
+    }
+}
+
+.action-btn{
+	padding-top: 8px;
+	padding-bottom: 5px;
+}
+
+.cued-logo-nav{
+	width: 45px;
+  	padding-right: 15px;
+}
+
+img.nextstepgo-logo-nav{
+	width: 170px;
+}
+
+
+
+/************************ Sidebar ********************************/
+
+#collapse-it{
+	max-width: 390px;
+	height: 100%;
+	background-color: $dkgrey;
+}
+
+#sidebar-btn{
+	background-color: none;
+	color: white;
+	margin-top: 20px;
+	text-align: right;
+	margin-right: 20px;
+	width: 50px;
+	margin-left: 200px;
+	
+}
+
+.profile-img{
+	border-radius: 100px;
+	width: 80%;
+	margin: auto;
+	margin: 10px;
+}
+
+.edit-text{
+	padding-left: 20px;
+	line-height: 0px;
+}
+
+.edit-icon{
+	height:17px;
+}
+
+.sign-out{
+	text-align: right;
+	padding-right: 20px;
+	padding-bottom: 10px;
+}
+
+.profile-img-box{
+	width: 40%;
+	text-align: center;
+}
+
+.profile-bar{
+	height: 200px;
+	width: 310px;
+	background-color:rgba(230,230,230,1.00);
+}
+
+.nav-item-side {
+	background-color: $dkgrey;
+	height: 40px;
+	margin-bottom: 3px;
+
+	a {
+		color:rgba(197,197,197,1.00);
+		border-bottom: solid thin black;
+	}
+}
+
+.sidebar-links{
+	margin-top: 20px;
+}
+
+.sidebar-active{
+	border-left: solid thick $maingreen;
+	background-color: lighten($dkgrey, 10%);
+	.nav-link{
+		margin-left: -5px;
+	}
+}
+
+.btn-sign-out{
+	height: 30px;
+	font-size: 13px;
+	font-weight: 300;
+}
+
+.sidebar-expanded{
+	
+}
+
+
+.collapsed-sidebar{
+	.sidebar-links{
+		text-align: center;
+	}
+	.bus-name{
+		display: none;
+	}
+	.edit-btn{
+		display: none;
+	}
+}
+
+/************************* Login Page ****************************/
+
+.login-screen{
+	height: 100%;
+	background-image: url($greengraphic);
+	background-size: 110% 120%;
+}
+
+.passwordhelp {
+	color: rgba(118,118,118,1.00);
+	&:hover {
+		color: darken($dkgrey, 30% );
+	}
+}
+
+.inactive-btn{
+	border: 1px solid rgba(198,198,198,1.00);
+	margin-bottom: 15px;
+	width: 100px;
+	&:hover {
+		background-color: rgba(236,236,236,1.00);
+	}
+}
+
+.active-btn{
+	border: 1px solid rgba(198,198,198,1.00);
+	background-color: $maingreen;
+	margin-bottom: 15px;
+	color: white;
+	width: 100px;
+}
+
+%cardimages {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 100%;
+}
+
+.login-img{
+	@extend %cardimages;
+	background-image: url($successgraphic);	
+}
+
+.register-img{
+	@extend %cardimages;
+	background-image: url($registergraphic);	
+}
+
+.welcome-card{
+	width: 950px;
+	height: 75%;
+	margin: auto;
+}
+
+.border-white{
+	border: 10px solid white;
+}
+
+.login-card-body{
+	padding: 40px;
+	padding-top: 10px;
+}
+
+.loginheader{
+	margin-bottom: 0px;
+	margin-top: 30px;
+}
+
+.desc-text{
+	font-size: 12px;
+	color:rgba(163,163,163,1.00);
+	margin-bottom: 20px;
+}
+
+.form-text{
+	font-size: 10px;
+}
+
+.min-imput{
+	border: none;
+	border-bottom: 1px solid $dkgrey;
+	border-radius: 0px;
+	background-color: rgba(255,255,255,0.00);
+	&:focus{
+		background-color: rgba(106,106,106,0.20);
+		box-shadow: none;
+	}
+}
+
+.loginlabel{
+	color: grey;
+	font-weight: 300;
+}
+
+.submitbutton {
+	width: 100%;
+	border: none;
+	margin-top: 40px;
+	&:hover {
+        background-color: darken($maingreen, 10% )!important;
+		color: white;
+    }
+}
+
+.registerbutton {
+	width: 100%;
+	&:hover {
+        background-color: $mainblue!important;
+		color: white;
+    }
+}
+
+.cued-attr{
+	display: inline;
+	color: white;
+	font-size: 14px;
+	padding-right: 7px;
+}
+
+.cued-logo{
+	width: 40px;
+	padding-right: 15px;
+}
+
+
+.greenbg{
+	background-image: url($greengraphic);
+	background-size: 110% 120%;
+	height: 100%;
+}
+
+.loginfooter {
+	background-color: rgba(0,0,0,0.00)!important;
+	text-align: right;
+	float: right;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.footerimgsm{
+	width: 30px;
+}
+
+.poweredby{
+	font-size: 12px;
+}
+
+
+/*************************** Register *********************************/
+
+.gearsimg{
+	width: 80%;
+	margin-left: 15%;
+}
+
+.footerimgmd {
+	width: 50px;
+}
+
+.mastfoot{
+	margin-top: 10%!important;
+}
+
+.negmargin {
+	margin-top: -15px;
+}
+
+/*Footer */
+footer{
+	padding: 10px;
+}
+
+.footerlogo{
+	text-align: right;
+}
+
+
+/****************************** Dashboard ******************************/
+
+.mainblock{
+	height: 100%;
+}
+
+.card-body {
+    min-height: 300px;
+}
+
+.flex-nowrap{
+	overflow-x: scroll;
+}
+
+.referrals-badge{
+	width: 100%;
+}
+
+.editpost {
+	color: rgba(164,164,164,1.00);
+	font-size: 9px;
+}
+
+.scrollcards{
+	background-color: $ltgrey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+
+.active-blue{
+	color: $medblue!important;
+}
+.bg-grey{
+	background-color: $dkgrey;
+}
+
+.dash-wt-link {
+	color: white!important;
+}
+
+.msg-card {
+	background-color: $maingreen;
+	color: white;
+}
+
+.msg-body{
+	min-height: 0;
+}
+
+.bluelink{
+	color: $medblue;
+	&:hover {
+        color: lighten($medblue, 20%);
+    }
+}
+
+.text-maingreen{
+	color: $maingreen;
+}
+
+//Calendar
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: $medblue;
+  text-align: center;
+}
+
+.month ul {
+  margin: 0;
+  padding: 0;
+}
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  list-style: none
+}
+
+.month .prev {
+  float: left;
+  padding-top: 10px;
+}
+
+.month .next {
+  float: right;
+  padding-top: 10px;
+}
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd;
+}
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center;
+}
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size:12px;
+  color: #777;
+}
+
+.days li .active {
+  padding: 5px;
+  background: $medblue;
+  color: white !important
+}
+
+.cal-date{
+	color: $medblue;
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+  .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {width: 12.5%;}
+  .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {width: 12.2%;}
+}
+
+/******************************Career Clusters ********************************/
+.finance-cluster{
+	color:rgba(37,101,47,1.00);
+}
+
+.marketing-cluster{
+	color:rgba(103,8,10,1.00);
+}
+
+.artcomm-cluster{
+	color:rgba(28,35,107,1.00);
+}
+
+.info-cluster {
+	color:rgba(0,121,141,1.00);
+}
+
+/***************************** Media Breakpoints *********************************/
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+	.welcome-card{
+		width: 550px;
+	}
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+	.action-btn{
+		margin-left: 30px;
+	}
+	.welcome-card{
+		width: 725px;
+	}
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+	.welcome-card {
+		width: 950px;
+	}
+}
+

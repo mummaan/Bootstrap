@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Custom Styles -->
+	<link rel="stylesheet" href="css/custom.css">
+
+    <title>Login</title>
+  </head>
+  <body>
+  <div class="login-screen">
+
+ <!-- NAVIGAION --> 
+ <nav class="navbar mb-5 navbar-expand-md navbar-light bg-light">
+
+<!-- NAV BRAND -->
+ 
+  <div>
+       <img class="cued-logo-nav ml-0" src="images/cuedin-logo.svg">
+       <img class="nextstepgo-logo-nav ml-0" src="images/nextstepgo.svg" href="#">
+	 </div>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+  
+<!-- NAV LINKS -->
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link mr-2" href="#">ABOUT US<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">SUPPORT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <!-- END OF NAV -->
+  
+<!-- CARD BODY -->
+  <!----------- LOGIN CARD ------------->
+<div class="welcome-card" id="card">
+    <div class="front row card no-gutters border-white">
+    <div class="col-md-6 d-none d-md-block login-img">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body login-card-body">
+      <div class="text-right">
+      <div class="btn-group" role="group" aria-label="Basic example">
+  			<button class="btn active-btn">Login</button>
+  			<button id="flip-btn" type="button" class="btn inactive-btn">Register</button>
+	  </div>	
+       </div>
+        <h1 class="loginheader">Welcome</h1>
+        <p class="desc-text">Please sign in to your account.</p>
+    		<form class="login-form">
+  				<div class="form-group">
+  				  <label for="exampleInputEmail1" class="loginlabel">Email address</label>
+  				  <input type="email" class="form-control min-imput" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+  				</div>
+  				<div class="form-group">
+  				  <label for="exampleInputPassword1" class="loginlabel">Password</label>
+  				  <input type="password" class="form-control min-imput" id="exampleInputPassword1" placeholder="">
+  				   <a href="#"><small class="form-text passwordhelp">Forgot Password?</small></a>
+  				</div>
+			</form>
+     <button type="submit" class="btn btn-maingreen submitbutton">Login</button>
+      </div>
+    </div>
+	</div>
+  <!----------- REGISTER CARD ------------->
+   <div class="back row welcome-card card no-gutters border-white">
+    <div class="col-md-6 d-none d-md-block register-img">
+    </div>
+    <div class="col-md-6">
+      <div class="card-body login-card-body">
+       <div class="text-right">
+       <div class="btn-group" role="group" aria-label="Basic example">
+  			<button id="unflip-btn" type="button" class="btn inactive-btn">Login</button>
+  			<button type="button" class="btn active-btn">Register</button>
+	  </div>
+       </div>
+        <h1 class="loginheader">Let's Get Started</h1>
+        <p class="desc-text">Begin by telling us about your business. You can fill in the details later.</p>
+      <form class="needs-validation" novalidate>
+        <div class="row">
+          <div class="col-12 mb-3">
+            <label for="firstName">Business Name</label>
+            <input type="text" class="form-control min-imput" id="firstName" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+              Valid first name is required.
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email">Email </label>
+          <input type="email" class="form-control min-imput" id="email" >
+          <div class="invalid-feedback">
+               Please enter a valid email address.
+       </div>
+        </div>
+         <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="firstName">Password</label>
+            <input type="text" class="form-control min-imput" id="password" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+             Password is required.
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="lastName">Confirm Password</label>
+            <input type="text" class="form-control min-imput" id="passwordconfirm" placeholder="" value="" required="">
+            <div class="invalid-feedback">
+              Password confirmation is required.
+            </div>
+          </div>
+          <div class="col-12 pt-0 mb-2 negmargin">
+          	<small class="form-text text-muted">Must be 8 characters, 1 uppercase letter, and 1 special character.</small>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-maingreen submitbutton">Submit</button>      
+      </form>
+      </div>
+  </div>
+</div>
+  
+  
+ </div>
+</div>
+  
+   
+<!-- FOOTER -->
+  <footer class="loginfooter">
+    <span class= "d-inline mr-2 text-white-50 poweredby">Powered By </span>
+    	<img class="footerimgsm" src="images/cuedin-logo.svg">    
+</footer>
+	 
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+    <!--Jquery flip -->
+	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+   
+   <!-- custom -->
+   <script src="js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

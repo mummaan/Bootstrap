@@ -1,0 +1,426 @@
+/* Scss Document */
+@import url("https://use.typekit.net/dpv5gwp.css");
+/*IMAGES*/
+/* Body Setup */
+body, html {
+  height: 100%; }
+
+/* COLORS */
+/* Buttons */
+.btn-maingreen {
+  background-color: #83bf4a !important;
+  color: white; }
+
+.btn-mainblue {
+  background-color: #0c293d !important;
+  color: white; }
+
+.btn-maingreen-outline {
+  background-color: white;
+  border: 1px solid #83bf4a !important;
+  color: #83bf4a; }
+
+.btn-mainblue-outline {
+  background-color: white;
+  border: 1px solid #0c293d !important;
+  color: #0c293d; }
+
+/**************************** FONTS **************************/
+h1, h2, h3, h4, h5, h6 {
+  font-family: forma-djr-text, sans-serif;
+  font-weight: 700; }
+
+p {
+  font-family: proxima-nova, sans-serif;
+  font-weight: 300; }
+
+a {
+  text-decoration: none;
+  color: #0c293d; }
+  a:hover {
+    color: #1d6292;
+    text-decoration: none; }
+
+/************************* Navbar *****************************/
+.navbar.navlogin.navbar-default {
+  margin-bottom: 0px; }
+
+nav {
+  font-family: forma-djr-text, sans-serif;
+  font-weight: 300;
+  -webkit-box-shadow: 7px 9px 16px 1px rgba(0, 0, 0, 0.27);
+  -moz-box-shadow: 7px 9px 16px 1px rgba(0, 0, 0, 0.27);
+  box-shadow: 7px 9px 16px 1px rgba(0, 0, 0, 0.27); }
+
+.navbar {
+  padding-top: 11px; }
+
+.nav-link {
+  color: #0c293d;
+  font-weight: 400; }
+  .nav-link:hover {
+    color: #257fbd; }
+
+.action-btn {
+  padding-top: 8px;
+  padding-bottom: 5px; }
+
+.cued-logo-nav {
+  width: 45px;
+  padding-right: 15px; }
+
+img.nextstepgo-logo-nav {
+  width: 170px; }
+
+/************************ Sidebar ********************************/
+#collapse-it {
+  max-width: 390px;
+  height: 100%;
+  background-color: #434c55; }
+
+#sidebar-btn {
+  background-color: none;
+  color: white;
+  margin-top: 20px;
+  text-align: right;
+  margin-right: 20px;
+  width: 50px;
+  margin-left: 200px; }
+
+.profile-img {
+  border-radius: 100px;
+  width: 80%;
+  margin: auto;
+  margin: 10px; }
+
+.edit-text {
+  padding-left: 20px;
+  line-height: 0px; }
+
+.edit-icon {
+  height: 17px; }
+
+.sign-out {
+  text-align: right;
+  padding-right: 20px;
+  padding-bottom: 10px; }
+
+.profile-img-box {
+  width: 40%;
+  text-align: center; }
+
+.profile-bar {
+  height: 200px;
+  width: 310px;
+  background-color: #e6e6e6; }
+
+.nav-item-side {
+  background-color: #434c55;
+  height: 40px;
+  margin-bottom: 3px; }
+  .nav-item-side a {
+    color: #c5c5c5;
+    border-bottom: solid thin black; }
+
+.sidebar-links {
+  margin-top: 20px; }
+
+.sidebar-active {
+  border-left: solid thick #83bf4a;
+  background-color: #596672; }
+  .sidebar-active .nav-link {
+    margin-left: -5px; }
+
+.btn-sign-out {
+  height: 30px;
+  font-size: 13px;
+  font-weight: 300; }
+
+.collapsed-sidebar .sidebar-links {
+  text-align: center; }
+.collapsed-sidebar .bus-name {
+  display: none; }
+.collapsed-sidebar .edit-btn {
+  display: none; }
+
+/************************* Login Page ****************************/
+.login-screen {
+  height: 100%;
+  background-image: url("../images/loginbg.jpg");
+  background-size: 110% 120%; }
+
+.passwordhelp {
+  color: #767676; }
+  .passwordhelp:hover {
+    color: black; }
+
+.inactive-btn {
+  border: 1px solid #c6c6c6;
+  margin-bottom: 15px;
+  width: 100px; }
+  .inactive-btn:hover {
+    background-color: #ececec; }
+
+.active-btn {
+  border: 1px solid #c6c6c6;
+  background-color: #83bf4a;
+  margin-bottom: 15px;
+  color: white;
+  width: 100px; }
+
+.login-img, .register-img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100%; }
+
+.login-img {
+  background-image: url("../images/success.jpg"); }
+
+.register-img {
+  background-image: url("../images/register.jpg"); }
+
+.welcome-card {
+  width: 950px;
+  height: 75%;
+  margin: auto; }
+
+.border-white {
+  border: 10px solid white; }
+
+.login-card-body {
+  padding: 40px;
+  padding-top: 10px; }
+
+.loginheader {
+  margin-bottom: 0px;
+  margin-top: 30px; }
+
+.desc-text {
+  font-size: 12px;
+  color: #a3a3a3;
+  margin-bottom: 20px; }
+
+.form-text {
+  font-size: 10px; }
+
+.min-imput {
+  border: none;
+  border-bottom: 1px solid #434c55;
+  border-radius: 0px;
+  background-color: rgba(255, 255, 255, 0); }
+  .min-imput:focus {
+    background-color: rgba(106, 106, 106, 0.2);
+    box-shadow: none; }
+
+.loginlabel {
+  color: grey;
+  font-weight: 300; }
+
+.submitbutton {
+  width: 100%;
+  border: none;
+  margin-top: 40px; }
+  .submitbutton:hover {
+    background-color: #6a9e38 !important;
+    color: white; }
+
+.registerbutton {
+  width: 100%; }
+  .registerbutton:hover {
+    background-color: #0c293d !important;
+    color: white; }
+
+.cued-attr {
+  display: inline;
+  color: white;
+  font-size: 14px;
+  padding-right: 7px; }
+
+.cued-logo {
+  width: 40px;
+  padding-right: 15px; }
+
+.greenbg {
+  background-image: url("../images/loginbg.jpg");
+  background-size: 110% 120%;
+  height: 100%; }
+
+.loginfooter {
+  background-color: rgba(0, 0, 0, 0) !important;
+  text-align: right;
+  float: right;
+  position: absolute;
+  bottom: 0;
+  right: 0; }
+
+.footerimgsm {
+  width: 30px; }
+
+.poweredby {
+  font-size: 12px; }
+
+/*************************** Register *********************************/
+.gearsimg {
+  width: 80%;
+  margin-left: 15%; }
+
+.footerimgmd {
+  width: 50px; }
+
+.mastfoot {
+  margin-top: 10% !important; }
+
+.negmargin {
+  margin-top: -15px; }
+
+/*Footer */
+footer {
+  padding: 10px; }
+
+.footerlogo {
+  text-align: right; }
+
+/****************************** Dashboard ******************************/
+.mainblock {
+  height: 100%; }
+
+.card-body {
+  min-height: 300px; }
+
+.flex-nowrap {
+  overflow-x: scroll; }
+
+.referrals-badge {
+  width: 100%; }
+
+.editpost {
+  color: #a4a4a4;
+  font-size: 9px; }
+
+.scrollcards {
+  background-color: #d6d7dd;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+
+.active-blue {
+  color: #4584b5 !important; }
+
+.bg-grey {
+  background-color: #434c55; }
+
+.dash-wt-link {
+  color: white !important; }
+
+.msg-card {
+  background-color: #83bf4a;
+  color: white; }
+
+.msg-body {
+  min-height: 0; }
+
+.bluelink {
+  color: #4584b5; }
+  .bluelink:hover {
+    color: #8db4d3; }
+
+.text-maingreen {
+  color: #83bf4a; }
+
+.month {
+  padding: 70px 25px;
+  width: 100%;
+  background: #4584b5;
+  text-align: center; }
+
+.month ul {
+  margin: 0;
+  padding: 0; }
+
+.month ul li {
+  color: white;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  list-style: none; }
+
+.month .prev {
+  float: left;
+  padding-top: 10px; }
+
+.month .next {
+  float: right;
+  padding-top: 10px; }
+
+.weekdays {
+  margin: 0;
+  padding: 10px 0;
+  background-color: #ddd; }
+
+.weekdays li {
+  display: inline-block;
+  width: 13.6%;
+  color: #666;
+  text-align: center; }
+
+.days {
+  padding: 10px 0;
+  background: #eee;
+  margin: 0; }
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: #777; }
+
+.days li .active {
+  padding: 5px;
+  background: #4584b5;
+  color: white !important; }
+
+.cal-date {
+  color: #4584b5; }
+
+/* Add media queries for smaller screens */
+@media screen and (max-width: 720px) {
+  .weekdays li, .days li {
+    width: 13.1%; } }
+@media screen and (max-width: 420px) {
+  .weekdays li, .days li {
+    width: 12.5%; }
+
+  .days li .active {
+    padding: 2px; } }
+@media screen and (max-width: 290px) {
+  .weekdays li, .days li {
+    width: 12.2%; } }
+/******************************Career Clusters ********************************/
+.finance-cluster {
+  color: #25652f; }
+
+.marketing-cluster {
+  color: #67080a; }
+
+.artcomm-cluster {
+  color: #1c236b; }
+
+.info-cluster {
+  color: #00798d; }
+
+/***************************** Media Breakpoints *********************************/
+@media (min-width: 576px) {
+  .welcome-card {
+    width: 550px; } }
+@media (min-width: 768px) {
+  .action-btn {
+    margin-left: 30px; }
+
+  .welcome-card {
+    width: 725px; } }
+@media (min-width: 992px) {
+  .welcome-card {
+    width: 950px; } }
