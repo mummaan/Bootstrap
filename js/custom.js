@@ -20,9 +20,6 @@ $("#unflip-btn").click(function(){
 	
 	
 //Collapsible Sidebar -------------------------
-//$("#sidebar-btn").click(function(){
- //   $("#collapse-it").toggleClass("collapsed-sidebar");
-//  });
 
 	
 	$("#sidebar-btn").click(function() {     
@@ -36,6 +33,7 @@ $("#unflip-btn").click(function(){
 		});
 		$( ".sidebar-active" ).css( "borderLeft", "0px" );
 		$( ".sidebar-active" ).css( "backgroundColor", "#434c55" );
+		$( ".sidebar-active" ).css( "color", "#83bf4a" );
 		$( ".nav-link" ).animate({
 			paddingTop: "8px",
 		});
@@ -96,6 +94,16 @@ $("#unflip-btn").click(function(){
 				}
 			}
 		});
-   	
+	
+	
+//Analytics
+
+	  
+  $( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+  } );
+	
+	
 });
 
