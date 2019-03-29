@@ -61,6 +61,12 @@ nav {
   .nav-link:hover {
     color: #257fbd; }
 
+.profile-img-nav {
+  width: 30px;
+  border: thin solid #0c293d;
+  border-radius: 20px;
+  margin-top: 5px; }
+
 .nav-txt {
   padding-left: 10px; }
 
@@ -69,15 +75,20 @@ nav {
   padding-bottom: 5px; }
 
 .cued-logo-nav {
-  width: 45px;
+  width: 35px;
   padding-right: 15px; }
 
 img.nextstepgo-logo-nav {
-  width: 170px; }
+  width: 150px; }
+
+.nav-dashboard {
+  padding: 0px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-top: 5px; }
 
 /************************ Sidebar ********************************/
 #collapse-it {
-  max-width: 390px;
   height: 100%;
   background-color: #434c55; }
 
@@ -88,7 +99,7 @@ img.nextstepgo-logo-nav {
   text-align: right;
   margin-right: 20px;
   width: 50px;
-  margin-left: 200px; }
+  margin-left: 150px; }
 
 .gradient-bar {
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#96c898+0,75ac96+29,6c84a7+70,b2b8c4+100 */
@@ -103,20 +114,25 @@ img.nextstepgo-logo-nav {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#96c898', endColorstr='#b2b8c4',GradientType=0 );
   /* IE6-9 */
   max-width: 10px;
-  padding: 0px; }
+  padding: 0px;
+  margin-left: -10px; }
 
 .profile-img {
   border-radius: 100px;
   width: 80%;
   margin: auto;
-  margin: 10px; }
+  margin: 10px;
+  margin-left: 10px; }
+
+.bus-name-header {
+  font-size: 23px; }
 
 .edit-text {
   padding-left: 20px;
   line-height: 0px; }
 
 .edit-icon {
-  height: 17px; }
+  height: 13px; }
 
 .sign-out {
   text-align: right;
@@ -129,7 +145,6 @@ img.nextstepgo-logo-nav {
 
 .profile-bar {
   height: 200px;
-  width: 310px;
   background-color: #e6e6e6; }
 
 .nav-item-side {
@@ -148,6 +163,10 @@ img.nextstepgo-logo-nav {
   background-color: #596672; }
   .sidebar-active .nav-link {
     margin-left: -5px; }
+
+.edit-btn {
+  font-size: 10px;
+  padding-top: 15px; }
 
 .btn-sign-out {
   height: 30px;
@@ -417,20 +436,47 @@ footer {
   .weekdays li, .days li {
     width: 12.2%; } }
 /****************************** Analytics ********************************/
-#sortable {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  width: 450px; }
+.bg-lt-grey {
+  background-color: #e2e2e2;
+  padding: 30px; }
 
-#sortable li {
-  margin: 3px 3px 3px 0;
-  padding: 1px;
-  float: left;
-  width: 100px;
-  height: 90px;
-  font-size: 4em;
-  text-align: center; }
+.large-data-row {
+  margin-bottom: 20px;
+  height: 65%; }
+
+.sm-data-row {
+  height: 25%; }
+
+.sm-data {
+  margin-right: 2%;
+  padding: 0px;
+  max-height: 100%; }
+
+.card-body {
+  min-height: 0px; }
+
+.settings-icon {
+  color: #a3a3a3; }
+  .settings-icon:hover {
+    color: #646464; }
+
+.card-header.data {
+  padding-top: .5rem;
+  padding-bottom: .5rem; }
+
+#dataSettingMenu {
+  background-color: transparent;
+  border: none;
+  padding: 0px; }
+  #dataSettingMenu:focus {
+    background-color: transparent;
+    box-shadow: none; }
+
+#mainbody {
+  padding-top: 20px; }
+
+.dropdown-toggle::after {
+  display: none; }
 
 /******************************Career Clusters ********************************/
 .finance-cluster {

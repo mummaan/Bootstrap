@@ -36,25 +36,26 @@ $("#unflip-btn").click(function(){
 		$( ".sidebar-active" ).css( "color", "#83bf4a" );
 		$( ".nav-link" ).animate({
 			paddingTop: "8px",
+			marginLeft: "-5px"
 		});
 		$( ".nav-txt" ).fadeOut("100");
 		$("#collapse-it").addClass("collapsed-sidebar");
 		$("#collapse-it").removeClass("sidebar-expanded");
-		$( ".profile-bar" ).animate({
-   			width: "100px",
-    	}, 500 );
-		$( "#collapse-it" ).animate({
-   			maxWidth: "100px",
-    	}, 500 );
+		$( "#collapse-it" ).addClass( "col-1");
+		$('#collapse-it').removeClass("col-2");
+		$( "#mainbody" ).addClass( "col-11");
+		$('#mainbody').removeClass("col-10");
 		$( "#sidebar-btn" ).animate({
    			marginTop: "20px",
-			marginLeft: "35px"
+			marginLeft: "45px"
     	}, 500 );	
 		$( ".profile-img" ).animate({
    			width: "80%",
+			margin: "0px",
+			marginLeft: "-10px"
     	}, 800 );
 		$( "#signout-btn" ).css("textAlign", "center" ).css("paddingRight", "0px" );
-		
+		$( ".btn-sign-out" ).css("marginLeft", "-5px" );
 	}
 	//EXPANDED VERSION
     else {
@@ -65,19 +66,18 @@ $("#unflip-btn").click(function(){
         $( ".nav-txt" ).fadeIn("100");
 		$("#collapse-it").removeClass("collapsed-sidebar");
 		$("#collapse-it").addClass("sidebar-expanded"); 
-		$( ".profile-bar" ).animate({
-   			width: "310px",
-    	}, 500 );
-		$( "#collapse-it" ).animate({
-   			maxWidth: "310px",
-    	}, 500 );
+		$( "#collapse-it" ).addClass( "col-2");
+		$('#collapse-it').removeClass("col-1");
+		$( "#mainbody" ).addClass( "col-10");
+		$('#mainbody').removeClass("col-11");
 		$("#sidebar-btn").css({'transform': 'rotate(0deg)'});
 		$( "#sidebar-btn" ).animate({
    			marginTop: "20px",
-			marginLeft: "200px"
+			marginLeft: "150px"
     	}, 500 );	
 		$( ".profile-img" ).animate({
    			width: "80%",
+			marginLeft: "10px",
     	}, 800 );
 		$( ".sidebar-active" ).css( "borderLeft", "solid thick #83bf4a" );
 		$( ".sidebar-active" ).css( "backgroundColor", "#525d69" );
@@ -98,12 +98,7 @@ $("#unflip-btn").click(function(){
 	
 //Analytics
 
-	  
-  $( function() {
-    $( "#sortable" ).sortable();
-    $( "#sortable" ).disableSelection();
-  } );
-	
+
 	
 });
 

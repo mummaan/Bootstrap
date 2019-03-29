@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>jQuery UI Sortable - Display as grid</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
   <style>
   </style>
   
@@ -16,6 +14,11 @@
     
     <!-- Custom Styles -->
 	<link rel="stylesheet" href="css/custom.css">
+  <style>
+	  body{
+		  overflow: hidden;
+	  }
+  </style>
   
 </head>
 <body>
@@ -38,10 +41,13 @@
   <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link mr-2" href="#">ABOUT US<span class="sr-only">(current)</span></a>
+        <a class="nav-link mr-2" href="#"><i data-feather="inbox" class=""></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">SUPPORT</a>
+        <a class="nav-link" href="#"><i data-feather="bell" class="mr-2"></i></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link pt-0" href="#"><img class="profile-img-nav" src="images/avatar.png"></a>
       </li>
     </ul>
   </div>
@@ -53,15 +59,15 @@
       <div class="row vh-100">
        
       <!---------------- SIDEBAR BEGINS --------------->
-        <nav class="col-md-2 p-0 d-none d-md-block sidebar sidebar-expanded" id="collapse-it">
+        <nav class="col-2 p-0 d-none d-md-block sidebar sidebar-expanded" id="collapse-it">
              <table class="profile-bar">
   				<tr>
   				  <td class="profile-img-box"><img class="profile-img" src="images/avatar.png"></td>
-  				  <td class="bus-name"><h2>Martin's Electronics</h2></td> 
+  				  <td class="bus-name"><h2 class="bus-name-header">Martin's Electronics</h2></td> 
   				</tr>
   				<tr>
-  				  <td class="align-bottom edit-btn"><p class="edit-text"><i data-feather="edit" class="edit-icon"></i>Edit Profile</p></td>
-  				  <td class="sign-out align-bottom" id="signout-btn"><span class="btn btn-maingreen btn-sign-out">Sign Out</span></td> 
+  				  <td class="edit-btn"><p class="edit-text"><i data-feather="edit" class="edit-icon"></i>Edit Profile</p></td>
+  				  <td class="sign-out" id="signout-btn"><span class="btn btn-maingreen btn-sign-out">Sign Out</span></td> 
   				</tr>
 			</table>
             <ul class="nav flex-column sidebar-links">
@@ -108,21 +114,54 @@
         <div class="gradient-bar col"></div>
 	<!-------------------- SIDEBAR ENDS -------------------->
     <!-------------------- BODY STARTS --------------------->  
- 
-<ul id="sortable">
-  <li class="ui-state-default">1</li>
-  <li class="ui-state-default">2</li>
-  <li class="ui-state-default">3</li>
-  <li class="ui-state-default">4</li>
-  <li class="ui-state-default">5</li>
-  <li class="ui-state-default">6</li>
-  <li class="ui-state-default">7</li>
-  <li class="ui-state-default">8</li>
-  <li class="ui-state-default">9</li>
-  <li class="ui-state-default">10</li>
-  <li class="ui-state-default">11</li>
-  <li class="ui-state-default">12</li>
-</ul>
+ 		<div class="col-10 bg-lt-grey" id="mainbody">
+ 			<div class="row large-data-row">
+ 				<div class="col-12 card bg-light p-0" id="datalg">
+ 					<div class="card-header data d-flex justify-content-between">
+  						 <span>Profile Interactions</span> 
+  						 <div class="dropdown">
+  							<button class="btn btn-secondary dropdown-toggle" type="button" id="dataSettingMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   							 <span class="settings-icon"><i data-feather="settings"></i></span>
+  							</button>
+  							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dataSettingMenu">
+    							<button class="dropdown-item" type="button">Heat Map</button>
+    							<button class="dropdown-item" type="button">Data Chart</button>
+    							<button class="dropdown-item" type="button">Cool Graph</button>
+  							</div>
+						</div>
+  					</div>
+  					<div class="card-body">
+  						<!-- THIS IS WHERE GRAPH CONTENT GOES -->
+  					</div>
+ 				</div>
+ 			</div>
+ 			<div class="row sm-data-row">
+ 				<div class="col card bg-light sm-data" id="data1">
+						<div class="card-header data">
+  						  Heat Map
+  						</div>
+  						<div class="card-body">
+  						  <!-- THIS IS WHERE GRAPH CONTENT GOES -->
+  						</div> 				
+  				</div>
+ 				<div class="col card bg-light sm-data" id="data2">
+ 					<div class="card-header data">
+  						  Data Chart
+  						</div>
+  						<div class="card-body">
+  						  <!-- THIS IS WHERE GRAPH CONTENT GOES -->
+  						</div>
+ 				</div>
+ 				<div class="col card bg-light sm-data mr-0 " id="data3">
+  						<div class="card-header data">
+  						  Cool Graph
+  						</div>
+  						<div class="card-body">
+  						  <!-- THIS IS WHERE GRAPH CONTENT GOES -->
+  						</div>
+ 				</div>
+ 			</div>
+ 		</div>
 		</div>
 	</div>
 
