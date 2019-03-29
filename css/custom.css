@@ -59,7 +59,14 @@ nav {
   color: #0c293d;
   font-weight: 400; }
   .nav-link:hover {
-    color: #257fbd; }
+    color: #83bf4a; }
+
+.nav-dropdown {
+  background-color: transparent;
+  border: none; }
+  .nav-dropdown:focus {
+    box-shadow: none;
+    background-color: #e3e3e3; }
 
 .profile-img-nav {
   width: 30px;
@@ -125,19 +132,24 @@ img.nextstepgo-logo-nav {
   margin-left: 10px; }
 
 .bus-name-header {
-  font-size: 23px; }
+  font-size: 23px;
+  padding-top: 30px; }
 
 .edit-text {
-  padding-left: 20px;
-  line-height: 0px; }
+  line-height: 0px;
+  font-size: 10px; }
+
+.profile-table {
+  margin-bottom: 20px; }
 
 .edit-icon {
   height: 13px; }
 
 .sign-out {
-  text-align: right;
+  text-align: center;
   padding-right: 20px;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  width: 80%; }
 
 .profile-img-box {
   width: 40%;

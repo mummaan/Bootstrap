@@ -97,7 +97,16 @@ nav{
 	color: $mainblue;
 	font-weight: 400;
 	&:hover {
-        color: lighten( $mainblue, 30% );
+        color: $maingreen;
+    }
+}
+
+.nav-dropdown{
+	background-color: transparent;
+	border: none;
+	&:focus {
+        box-shadow: none;
+		background-color: rgba(227,227,227,1.00);
     }
 }
 
@@ -173,11 +182,16 @@ img.nextstepgo-logo-nav{
 
 .bus-name-header{
 	font-size: 23px;
+	padding-top: 30px;
 }
 
 .edit-text{
-	padding-left: 20px;
 	line-height: 0px;
+	font-size: 10px;
+}
+
+.profile-table{
+	margin-bottom: 20px;
 }
 
 .edit-icon{
@@ -185,9 +199,10 @@ img.nextstepgo-logo-nav{
 }
 
 .sign-out{
-	text-align: right;
+	text-align: center;
 	padding-right: 20px;
 	padding-bottom: 10px;
+	width: 80%;
 }
 
 .profile-img-box{

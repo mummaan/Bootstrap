@@ -34,9 +34,10 @@ $("#unflip-btn").click(function(){
 		$( ".sidebar-active" ).css( "borderLeft", "0px" );
 		$( ".sidebar-active" ).css( "backgroundColor", "#434c55" );
 		$( ".sidebar-active" ).css( "color", "#83bf4a" );
-		$( ".nav-link" ).animate({
+		$( ".nav-link-side" ).animate({
 			paddingTop: "8px",
-			marginLeft: "-5px"
+			marginLeft: "-5px",
+			paddingBottom: "15px"
 		});
 		$( ".nav-txt" ).fadeOut("100");
 		$("#collapse-it").addClass("collapsed-sidebar");
@@ -52,14 +53,15 @@ $("#unflip-btn").click(function(){
 		$( ".profile-img" ).animate({
    			width: "80%",
 			margin: "0px",
-			marginLeft: "-10px"
+			marginLeft: "-10px",
+			marginTop: "10px",
     	}, 800 );
-		$( "#signout-btn" ).css("textAlign", "center" ).css("paddingRight", "0px" );
-		$( ".btn-sign-out" ).css("marginLeft", "-5px" );
+		$( "#signout-btn" ).css("textAlign", "center" ).css("paddingRight", "5px" );
+		$( ".btn-sign-out" ).css("marginLeft", "-10px" );
 	}
 	//EXPANDED VERSION
     else {
-		$( ".nav-link" ).animate({
+		$( ".nav-link-side" ).animate({
 			height: "40px",
 			paddingTop: "8px",
 		});
@@ -97,8 +99,9 @@ $("#unflip-btn").click(function(){
 	
 	
 //Analytics
-
-
+		$("#heatbtn").click(function() { 
+			
+		});
 	
 });
 

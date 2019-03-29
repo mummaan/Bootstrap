@@ -47,7 +47,17 @@
         <a class="nav-link" href="#"><i data-feather="bell" class="mr-2"></i></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link pt-0" href="#"><img class="profile-img-nav" src="images/avatar.png"></a>
+        	<div class="dropdown">
+  				<button class="dropdown-toggle nav-dropdown" type="button" id="navSettingMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   				<a class="nav-link pt-0" href="#"><img class="profile-img-nav" src="images/avatar.png"></a>
+  				</button>
+  				<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navSettingMenu">
+    				<button class="dropdown-item" type="button">Profile</button>
+    				<button class="dropdown-item" type="button">Help</button>
+    				<button class="dropdown-item" type="button">Account Settings</button>
+    				<button class="dropdown-item" type="button">Logout</button>
+  				</div>
+			</div>
       </li>
     </ul>
   </div>
@@ -60,50 +70,52 @@
        
       <!---------------- SIDEBAR BEGINS --------------->
         <nav class="col-2 p-0 d-none d-md-block sidebar sidebar-expanded" id="collapse-it">
-             <table class="profile-bar">
+             <div class="profile-bar text-center">
+             <table class="profile-table text-left">
   				<tr>
   				  <td class="profile-img-box"><img class="profile-img" src="images/avatar.png"></td>
-  				  <td class="bus-name"><h2 class="bus-name-header">Martin's Electronics</h2></td> 
-  				</tr>
-  				<tr>
-  				  <td class="edit-btn"><p class="edit-text"><i data-feather="edit" class="edit-icon"></i>Edit Profile</p></td>
-  				  <td class="sign-out" id="signout-btn"><span class="btn btn-maingreen btn-sign-out">Sign Out</span></td> 
-  				</tr>
+  				  <td class="bus-name">
+  				  <h2 class="bus-name-header">Martin's Electronics</h2>
+  				  <p class="edit-text"><i data-feather="edit" class="edit-icon"></i>Edit Profile</p>
+  				  </td> 
+				 </tr>  				
 			</table>
+           <span id="signout-btn" class="btn btn-maingreen sign-out btn-sign-out">Sign Out</span>
+           </div>
             <ul class="nav flex-column sidebar-links">
            
               <li class="nav-item-side">
-                <a class="nav-link sidebar-active" href="#">
+                <a class="nav-link nav-link-side sidebar-active" href="dashboard.html">
                   <i data-feather="home"></i>
                   <span class="nav-txt">Dashboard</span>
                 </a>
               </li>
               <li class="nav-item-side">
-                <a class="nav-link" href="#">
+                <a class="nav-link nav-link-side" href="applications.html">
                   <i data-feather="check-circle"></i>
 					<span class="nav-txt">Applications</span>
                 </a>
               </li>
               <li class="nav-item-side">
-                <a class="nav-link" href="#">
+                <a class="nav-link nav-link-side" href="postings.html">
                   <i data-feather="clipboard"></i>
 					<span class="nav-txt">Postings</span>
                 </a>
               </li>
               <li class="nav-item-side">
-                <a class="nav-link" href="#">
+                <a class="nav-link nav-link-side" href="analytics.html">
                   <i data-feather="pie-chart"></i>
 					<span class="nav-txt">Analytics</span>
                 </a>
               </li>
               <li class="nav-item-side">
-                <a class="nav-link" href="#">
+                <a class="nav-link nav-link-side" href="calendar.html">
                   <i data-feather="calendar"></i>
 					<span class="nav-txt">Calendar</span>
                 </a>
               </li>
               <li class="nav-item-side">
-                <a class="nav-link" href="#">
+                <a class="nav-link nav-link-side" href="messages.html">
                   <i data-feather="inbox"></i>
 					<span class="nav-txt">Messages</span>
                 </a>
@@ -116,7 +128,7 @@
     <!-------------------- BODY STARTS --------------------->  
  		<div class="col-10 bg-lt-grey" id="mainbody">
  			<div class="row large-data-row">
- 				<div class="col-12 card bg-light p-0" id="datalg">
+ 				<div class="col-12 card bg-light p-0">
  					<div class="card-header data d-flex justify-content-between">
   						 <span>Profile Interactions</span> 
   						 <div class="dropdown">
@@ -124,40 +136,44 @@
    							 <span class="settings-icon"><i data-feather="settings"></i></span>
   							</button>
   							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dataSettingMenu">
-    							<button class="dropdown-item" type="button">Heat Map</button>
-    							<button class="dropdown-item" type="button">Data Chart</button>
-    							<button class="dropdown-item" type="button">Cool Graph</button>
+    							<button class="dropdown-item" type="button" id="heatbtn">Heat Map</button>
+    							<button class="dropdown-item" type="button" id="databtn">Data Chart</button>
+    							<button class="dropdown-item" type="button" id="coolbtn">Cool Graph</button>
   							</div>
 						</div>
   					</div>
-  					<div class="card-body">
+  					<div class="card-body" id="datalg">
   						<!-- THIS IS WHERE GRAPH CONTENT GOES -->
+  						<p>test content a</p>
   					</div>
  				</div>
  			</div>
  			<div class="row sm-data-row">
- 				<div class="col card bg-light sm-data" id="data1">
+ 				<div class="col card bg-light sm-data" >
 						<div class="card-header data">
   						  Heat Map
   						</div>
-  						<div class="card-body">
+  						<div class="card-body" id="data1">
   						  <!-- THIS IS WHERE GRAPH CONTENT GOES -->
+  						  <p>test content b</p>
   						</div> 				
   				</div>
- 				<div class="col card bg-light sm-data" id="data2">
+ 				<div class="col card bg-light sm-data">
  					<div class="card-header data">
   						  Data Chart
   						</div>
-  						<div class="card-body">
+  						<div class="card-body" id="data2">
   						  <!-- THIS IS WHERE GRAPH CONTENT GOES -->
+  						  <p>test content c</p>
   						</div>
  				</div>
- 				<div class="col card bg-light sm-data mr-0 " id="data3">
+ 				<div class="col card bg-light sm-data mr-0 ">
   						<div class="card-header data">
   						  Cool Graph
   						</div>
-  						<div class="card-body">
+  						<div class="card-body" id="data3">
   						  <!-- THIS IS WHERE GRAPH CONTENT GOES -->
+  						  <p>test content d</p>
   						</div>
  				</div>
  			</div>
