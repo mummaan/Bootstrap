@@ -448,9 +448,35 @@ footer{
 
 /****************************** Dashboard ******************************/
 
-.mainblock{
+.posting-block{
 	height: 100%;
+	max-height: 100%;
+	overflow-y: scroll;
 }
+
+
+//////////////CUSTOM SCROLLBAR
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $maingreen; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darken($maingreen, 10%); 
+}
+/////////////
+
 
 .card-body {
     min-height: 300px;
@@ -464,6 +490,15 @@ footer{
 	width: 100%;
 }
 
+.job-title{
+	font-size: 20px;
+	color: white;
+}
+
+.header-collapse{
+	background-color: $dkgrey;
+}
+
 .editpost {
 	color: rgba(164,164,164,1.00);
 	font-size: 9px;
@@ -475,6 +510,53 @@ footer{
 	padding-bottom: 20px;
 }
 
+.bg-white{
+	background-color: white;
+}
+
+.h-90{
+	height: 90%;
+}
+
+.h-60{
+	height: 60%
+}
+
+.h-48{
+	height: 48%;
+}
+
+.submitted-text{
+	margin-bottom: 0px;
+	font-size: 10px;
+	color: darken($ltgrey, 20%);
+}
+
+.applicant-name {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+
+.new-badge{
+	margin-top: -5px;
+	vertical-align: middle;
+	background-color: $ltblue;
+}
+
+.view-app-btn{
+	background-color: $maingreen;
+	border: none;
+	&:hover{
+		background-color: darken($maingreen, 20%);
+	}
+}
+
+.collapse-icon{
+	color: $maingreen;
+	&:hover{
+		color: darken($maingreen, 20%);
+	}
+}
 
 .active-blue{
 	color: $medblue!important;
@@ -509,73 +591,33 @@ footer{
 
 //Calendar
 
-.month {
-  padding: 70px 25px;
-  width: 100%;
-  background: $medblue;
-  text-align: center;
+.sm-cal{
+	max-height: 100%;
+	border: none;
 }
 
-.month ul {
-  margin: 0;
-  padding: 0;
+.cal-box{
+	padding: 0px;
 }
 
-.month ul li {
-  color: white;
-  font-size: 20px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  list-style: none
+.date{
+	background-color: $ltblue;
 }
 
-.month .prev {
-  float: left;
-  padding-top: 10px;
+.month{
+	color: white;
+	font-weight:800;
+	font-size: 25px;
 }
 
-.month .next {
-  float: right;
-  padding-top: 10px;
+.day{
+	color: white;
+	font-size: 70px;
 }
 
-.weekdays {
-  margin: 0;
-  padding: 10px 0;
-  background-color: #ddd;
-}
-
-.weekdays li {
-  display: inline-block;
-  width: 13.6%;
-  color: #666;
-  text-align: center;
-}
-
-.days {
-  padding: 10px 0;
-  background: #eee;
-  margin: 0;
-}
-
-.days li {
-  list-style-type: none;
-  display: inline-block;
-  width: 13.6%;
-  text-align: center;
-  margin-bottom: 5px;
-  font-size:12px;
-  color: #777;
-}
-
-.days li .active {
-  padding: 5px;
-  background: $medblue;
-  color: white !important
-}
-
-.cal-date{
-	color: $medblue;
+.time{
+	color: $ltblue;
+	text-align: right;
 }
 
 /* Add media queries for smaller screens */
