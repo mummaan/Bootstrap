@@ -690,6 +690,55 @@ footer{
 	display: none;
 }
 
+
+/********************************** CALENDAR ********************************/
+#calendar{
+	background-color: white;
+	border: solid 20px white;
+	border-radius: 5px;
+	width: 100%;
+	margin: 0px;
+}
+
+.h-85{
+	height: 85%;
+}
+
+.event-box{
+	padding-top: 20px;
+}
+
+.calheader{
+	background-color: $ltblue;
+	color: white;
+}
+
+.bg-dk-grey{
+	background-color: $dkgrey;
+	color: white;
+}
+
+.new-event-btn{
+	border: none;
+	background-color: $ltgrey;
+}
+
+.daily-events {
+}
+
+.fc-event, .fc-event-dot {
+    background-color: $maingreen!important;
+}
+
+.fc-event{
+	border: none!important;
+}
+
+.fc-unthemed td.fc-today {
+    background: $ltgrey!important;
+}
+
+
 /******************************Career Clusters ********************************/
 .finance-cluster{
 	color:rgba(37,101,47,1.00);
@@ -733,4 +782,15 @@ footer{
 		width: 950px;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
 

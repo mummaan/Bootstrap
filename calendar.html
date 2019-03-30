@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Calendar</title>
+  <title>Analytics</title>
   <style>
   </style>
   
@@ -19,7 +19,95 @@
 		  overflow: hidden;
 	  }
   </style>
-  
+  <link href="css/main.css" rel="stylesheet" />
+<link href="css/daygridmain.css" rel="stylesheet" />
+<script src="js/main.js"></script>
+<script src="js/interactionmain.js"></script>
+<script src="js/daygridmain.js"></script>
+<script>
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+	
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      plugins: [ 'interaction', 'dayGrid', 'timeGrid' ],
+      defaultDate: '2019-03-12',
+      editable: true,
+	  selectable: true,
+	  height: '1200px',
+	  
+	  select: function(info) {
+      	alert('selected ' + info.startStr + ' to ' + info.endStr);
+		var clickedOn= info.startStr;
+		var dateDiv = document.getElementById('todayDate');
+		var children = dateDiv.childNodes;
+		for(var i = 0; i < children.length; i++)
+    	someDiv.removeChild(children[i]);
+	  	dateDiv.appendChild(document.createTextNode(info.startStr));
+},
+      eventLimit: true, // allow "more" link when too many events
+      events: [
+        {
+          title: 'All Day Event',
+          start: '2019-03-01'
+        },
+        {
+          title: 'Long Event',
+          start: '2019-03-07',
+          end: '2019-03-07'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2019-03-09T16:00:00'
+        },
+        {
+          groupId: 999,
+          title: 'Repeating Event',
+          start: '2019-03-16T16:00:00'
+        },
+        {
+          title: 'Conference',
+          start: '2019-03-11',
+          end: '2019-03-13'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-03-12T10:30:00',
+          end: '2019-03-12T12:30:00'
+        },
+        {
+          title: 'Lunch',
+          start: '2019-03-12T12:00:00'
+        },
+        {
+          title: 'Meeting',
+          start: '2019-03-12T14:30:00'
+        },
+        {
+          title: 'Happy Hour',
+          start: '2019-03-12T17:30:00'
+        },
+        {
+          title: 'Dinner',
+          start: '2019-03-12T20:00:00'
+        },
+        {
+          title: 'Birthday Party',
+          start: '2019-03-13T07:00:00'
+        },
+        {
+          title: 'Click for Google',
+          url: 'http://google.com/',
+          start: '2019-03-28'
+        }
+      ]
+    });
+    calendar.render();
+  });
+
+</script>
+    
 </head>
 <body>
  
@@ -126,10 +214,69 @@
         <div class="gradient-bar col"></div>
 	<!-------------------- SIDEBAR ENDS -------------------->
     <!-------------------- BODY STARTS --------------------->  
- 		<div class="col-10 bg-lt-grey" id="mainbody">
- 			
- 			<!-------- PLACE CALENDAR HERE ----------->
- 			
+ 		<div class="col-6 bg-lt-grey" id="maincalbody">
+					<div class="cal-container h-85">
+ 					<!------- CALENDAR GOES HERE ------->
+
+ 					  <div id="calendar"></div>
+					</div>
+ 					
+ 			</div>
+ 		<div class="col-4 bg-lt-grey event-box">
+ 			<div class="h-85 daily-events">
+ 				<div class="card bg-white">
+  					<div class="card-header calheader">
+  					  <h3 id="todayDate"></h3>
+  					</div>
+  					<ul class="list-group list-group-flush">
+  					  <li class="list-group-item"><h6><span class="badge badge-secondary mr-3">9:00 a.m.</span>Your posting "Summer Intern" expires today.</h6></li>
+  					  <li class="list-group-item"><h6><span class="badge badge-secondary mr-3">4:30 p.m.</span>Shady Creek High Career Fair</h6></li>
+  					  <button type="button" data-toggle="modal" class="p-0 new-event-btn" data-target="#exampleModal"><li class="list-group-item bg-dk-grey"><i data-feather="plus-circle" class="mr-3"> </i>Add a New Event</li></button>
+  					  
+  					  <!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="exampleModalLabel">Add Event</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+						        <form>
+  									<div class="form-group row">
+  									  <label for="inputEmail3" class="col-sm-3 col-form-label">Event Name</label>
+  									  <div class="col-sm-9">
+  									    <input type="email" class="form-control" id="inputEmail3">
+  									  </div>
+  									</div>
+  									<div class="form-group row">
+  									  <label  class="col-sm-3 col-form-label">Description</label>
+  									  <div class="col-9">
+  									    <textarea style="width: 100%;"></textarea>
+  									</div>
+									</div>
+  									<div class="form-group row">
+  									  <label class="col-sm-3 col-form-label">Time</label>
+  									  <div class="col-sm-9">
+  									    <input type="time" id="appt" name="appt" min="9:00" max="18:00" required>
+  									  </div>
+  									</div>
+								</form>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        <button type="button" class="btn btn-primary">Save changes</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+  					
+
+  					</ul>
+				</div>
+ 			</div>
  			
  		</div>
 		</div>
@@ -165,6 +312,9 @@
     <script>
       feather.replace()
     </script>
+    
+    
+  
  
 </body>
 </html>

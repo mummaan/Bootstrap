@@ -46,6 +46,8 @@ $("#unflip-btn").click(function(){
 		$('#collapse-it').removeClass("col-2");
 		$( "#mainbody" ).addClass( "col-11");
 		$('#mainbody').removeClass("col-10");
+		$( "#maincalbody" ).addClass( "col-11");
+		$('#maincalbody').removeClass("col-10");
 		$( "#sidebar-btn" ).animate({
    			marginTop: "20px",
 			marginLeft: "45px"
@@ -102,6 +104,9 @@ $("#unflip-btn").click(function(){
 		$("#heatbtn").click(function() { 
 			
 		});
+
+//CALENDAR
+	
+	$("#todayDate").html(Date);
 	
 });
-
