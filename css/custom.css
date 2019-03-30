@@ -517,6 +517,57 @@ footer {
 .dropdown-toggle::after {
   display: none; }
 
+/*************************** Postings *********************************/
+.posting-screen {
+  height: 100%;
+  background-image: url("../images/loginbg.jpg");
+  background-size: 110% 120%; }
+
+.md-white {
+  background-color: #fff;
+  padding: 20px; }
+
+.med-data-row {
+  margin-bottom: 20px;
+  height: 30%; }
+
+.bg-white {
+  background-color: white; }
+
+.editicon {
+  color: #35858e; }
+
+.xicon {
+  color: #434c55; }
+
+.sm-data-row {
+  margin-bottom: 20px;
+  height: 30%; }
+
+#editPosting {
+  background-color: transparent;
+  border: none;
+  padding: 0px; }
+  #editPosting:focus {
+    background-color: transparent;
+    box-shadow: none; }
+
+#editPosting2 {
+  background-color: transparent;
+  border: none;
+  padding: 0px; }
+  #editPosting2:focus {
+    background-color: transparent;
+    box-shadow: none; }
+
+#editPosting3 {
+  background-color: transparent;
+  border: none;
+  padding: 0px; }
+  #editPosting3:focus {
+    background-color: transparent;
+    box-shadow: none; }
+
 /********************************** CALENDAR ********************************/
 #calendar {
   background-color: white;
