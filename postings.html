@@ -188,7 +188,7 @@
   				 			 <span class="x-search xicon"> <i data-feather="search"></i></span><input type="search" class="form-control min-imput" id="examplesearch" aria-describedby="search" placeholder="Title or Keywords" >
   							</div>
 							</form>
-					
+							
 					
 					<!---- Career Clusters---->
  					<div class="accordion mt-3" id="accordionExample">
@@ -246,14 +246,30 @@
  						      	</button>
  						    </div> 						  
  						    	<h6 class="text-right mb-0 job-title d-inline">Type</h6>
+	
 								  </div>
  						  </div>
+							
+							
 							
 						<!---- Type check boxes---->
   						  <div id="collapseTwo" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
   						    <div class="card-body">
 								
-								<div class="form-check">
+						<!---- Select a Type---->
+						<div class="dropdown mr-4 d-inline btn-group">
+  							<button class="btn btn-secondary btn-sm dropdown-toggle bg-blue" type="button" id="btnType" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   							 </i> Select a Type</span>
+  							</button>
+							
+  							<div class="dropdown-menu dropdown-menu-left" aria-labelledby="dataSettingMenu">
+    							<button class="dropdown-item" type="button" id="jobbtn">Job</button>
+    							<button class="dropdown-item" type="button" id="learningbtn">Learning</button>
+    							<button class="dropdown-item" type="button" id="scholarshipbtn">Scholarship</button>
+  							</div>
+						</div>
+								<!---- Now Type Check boxes---->
+								<div class="form-check mt-3">
 									  <input class="form-check-input" type="checkbox" value="" id="TypeCheck1">
 									  <label class="form-check-label" for="TypeCheck1">
 										Full Time
@@ -287,14 +303,70 @@
 										Scholarship
 									  </label>
 									</div>
-								
 									
   						    </div>
   						  </div>
-  						</div>
- 				
+						</div>
+						
 							</div>
+						
  								</div>
+						
+						 <button type="button" data-toggle="modal" class="p-0 new-event-btn" data-target="#exampleModal"><li class="list-group-item bg-green"><i data-feather="plus-circle" class="mr-3"> </i>Add a Career Type</li></button>
+  					  
+  					  <!-- Modal -->
+						<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <h5 class="modal-title" id="exampleModalLabel">Job Title and Department Details</h5>
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						          <span aria-hidden="true">&times;</span>
+						        </button>
+						      </div>
+						      <div class="modal-body">
+								  
+								  <form>
+									  <h5>Description</h5>
+									  <div class="form-group">
+										<label for="Job Title">Job Title</label>
+										<input type="jobtitle" class="form-control" id="JobTitle" aria-describedby="JobTitle" placeholder="Enter">
+									  </div>
+									   <div class="form-group">
+											<label for="CareerCluster">Career Cluster</label>
+											<select class="form-control w-50" id="CareerCluster">
+											  <option>Select</option>
+											  <option>Marketing</option>
+											  <option>Public Relations</option>
+											  <option>It</option>
+											</select>
+										  </div>
+									  <div class="form-group">
+										<label for="type">Internal Code</label>
+										<input type="internalcode" class="form-control w-50" id="internalcode" placeholder="internal code">
+									  </div>
+									  
+									  <h5>Location</h5>
+									 
+									  <div class="form-group">
+										<input type="location" class="form-control" id="Location" aria-describedby="Location" placeholder="Region, City, or Zip">
+									  </div>
+								  
+								  <h5>Description</h5>
+								   <div class="form-group">
+										<input type="description" class="form-control input-mysize" id="Description" aria-describedby="Description" placeholder="Enter the job description here; include key areas.">
+									  </div>
+							       </form>
+								  
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						        <button type="button" class="btn bg-green">Save changes</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
+	
 									</div>
 				<!---- End of Filter Card----->
 				
@@ -378,10 +450,6 @@
  			</div> <!---row---->
 		 </div>  <!---column---->
 		
-				
-				
-				
-	
 	 
 	 
 	 

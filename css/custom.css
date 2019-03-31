@@ -573,6 +573,17 @@ footer {
   background-image: url("../images/loginbg.jpg");
   background-size: 110% 120%; }
 
+.input-mysize {
+  height: 50px; }
+
+.bg-blue {
+  background-color: #0c293d;
+  color: white; }
+
+.bg-green {
+  background-color: #83bf4a;
+  color: white; }
+
 /********************************** CALENDAR ********************************/
 #calendar {
   background-color: white;
