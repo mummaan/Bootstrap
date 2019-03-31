@@ -641,17 +641,17 @@ footer{
 	padding: 30px;
 }
 
-.large-data-row{
+.large-analytic-row{
 	margin-bottom: 20px;
 	height: 65%;
 }
 
-.sm-data-row{
+.sm-analytic-row{
 	height: 25%;
 }
 
 .sm-data{
-	margin-right: 2%;
+	margin-right: 0%;
 	padding: 0px;
 	max-height: 100%;
 }
@@ -659,6 +659,22 @@ footer{
 .card-body{
 	min-height: 0px;
 }
+
+.dark-list{
+	background-color: $dkgrey;
+	border-radius: 0px;
+	.list-group-item{
+		background-color: $dkgrey;
+		border-color: black;
+		border-right: none;
+		border-left: none;
+		border-radius: 0px;
+		&:hover{
+			background-color: lighten($dkgrey, 10%);
+		}
+	}
+}
+
 
 .settings-icon{
 	color: rgba(163,163,163,1.00);

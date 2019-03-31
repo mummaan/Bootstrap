@@ -99,11 +99,6 @@ $("#unflip-btn").click(function(){
 			}
 		});
 	
-	
-//Analytics
-		$("#heatbtn").click(function() { 
-			
-		});
 
 //CALENDAR
 	
