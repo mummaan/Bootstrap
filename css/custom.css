@@ -568,6 +568,11 @@ footer {
     background-color: transparent;
     box-shadow: none; }
 
+.posting-screen {
+  height: 100%;
+  background-image: url("../images/loginbg.jpg");
+  background-size: 110% 120%; }
+
 /********************************** CALENDAR ********************************/
 #calendar {
   background-color: white;
