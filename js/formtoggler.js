@@ -13,15 +13,17 @@ $(document).ready(function(){
         if (this.value === 'jobOpp') {
 			$("#postingFormJob").css("display", "block");
 			$("#postingFormLearn").css("display", "none");
-			
+			$("#postingFormScholar").css("display", "none");
         }
         else if (this.value === 'learnOpp') {
 			$("#postingFormJob").css("display", "none");
 			$("#postingFormLearn").css("display", "block");
+			$("#postingFormScholar").css("display", "none");
         }
 		else if (this.value === 'scholarship') {
-            alert("Get Mon3Y");
-			$("#postingForm").empty();
+            $("#postingFormJob").css("display", "none");            
+			$("#postingFormLearn").css("display", "none");
+			$("#postingFormScholar").css("display", "block");
         }
 		
     });
