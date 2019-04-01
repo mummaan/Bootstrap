@@ -709,6 +709,10 @@ footer{
 /*************************** Postings *********************************/
 
 
+.d-none{
+	display: none;
+}
+
 .posting-screen{
 	height: 100%;
 	background-image: url($greengraphic);
