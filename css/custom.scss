@@ -724,6 +724,11 @@ footer{
 	padding: 20px;
 }
 
+.cluster-list{
+	max-height: 200px;
+	overflow: scroll;
+}
+
 .med-data-row{
 	margin-bottom: 20px;
 	height: 30%;

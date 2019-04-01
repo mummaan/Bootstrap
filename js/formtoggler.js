@@ -27,5 +27,43 @@ $(document).ready(function(){
         }
 		
     });
-
+	
+	//DELETE POST
+	//$(".deleteBtn").click(function(){
+	//	$(this).addClass("toBeDeleted");
+	//});	
+	
+	//DELETE POST
+	$(document).on('click', ".deleteBtn", function () {
+		$(this).addClass("toBeDeleted");
+	});
+		
+	$(".confirmDelete").click(function(){
+		$('#deleteModal').modal('hide'); 
+		//hide the modal
+		$('body').removeClass('modal-open'); 
+		//modal-open class is added on body so it has to be removed
+		$('.modal-backdrop').remove();
+		//need to remove div with modal-backdrop class
+		$('.toBeDeleted').closest('.card').remove();
+		//$(this).parents('.card').remove();
+		//alert("Hello! You clicked me!");
+	});
+	
+	
+	//NEW POST
+	$(".addPost").click(function(){
+		$('#newPostModal').modal('hide'); 
+		//hide the modal
+		$('body').removeClass('modal-open'); 
+		//modal-open class is added on body so it has to be removed
+		$('.modal-backdrop').remove();
+		//need to remove div with modal-backdrop class
+		
+		var jobCard=$('.jobCardTemplate').clone().addClass('jobCard');
+    	$('.posting-row').prepend(jobCard);
+		$('.jobCard').css('display', 'block');		
+		$('.jobCard').removeClass('jobCardTemplate');
+	});
+	
 });
