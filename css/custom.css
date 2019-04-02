@@ -479,9 +479,13 @@ footer {
   background-color: #e2e2e2;
   padding: 30px; }
 
+#exportBtn {
+  float: left; }
+
 .large-analytic-row {
   margin-bottom: 20px;
-  height: 65%; }
+  height: 100%;
+  overflow: scroll; }
 
 .sm-analytic-row {
   height: 25%; }
@@ -532,11 +536,6 @@ footer {
 /*************************** Postings *********************************/
 .d-none {
   display: none; }
-
-.posting-screen {
-  height: 100%;
-  background-image: url("../images/loginbg.jpg");
-  background-size: 110% 120%; }
 
 .md-white {
   background-color: #fff;
@@ -593,7 +592,8 @@ footer {
 .posting-screen {
   height: 100%;
   background-image: url("../images/loginbg.jpg");
-  background-size: 110% 120%; }
+  background-attachment: scroll;
+  background-repeat: no-repeat; }
 
 .input-mysize {
   height: 50px; }
@@ -661,6 +661,9 @@ input:checked + .slider:before {
   margin-top: 20px;
   margin-bottom: 20px;
   height: 100%; }
+
+.filter-row {
+  max-height: 100%; }
 
 /********************************** CALENDAR ********************************/
 #calendar {

@@ -641,9 +641,14 @@ footer{
 	padding: 30px;
 }
 
+#exportBtn{
+	float: left;
+}
+
 .large-analytic-row{
 	margin-bottom: 20px;
-	height: 65%;
+	height: 100%;
+	overflow: scroll;
 }
 
 .sm-analytic-row{
@@ -713,11 +718,6 @@ footer{
 	display: none;
 }
 
-.posting-screen{
-	height: 100%;
-	background-image: url($greengraphic);
-	background-size: 110% 120%;
-}
 
 .md-white{
 	background-color: #fff;
@@ -787,9 +787,10 @@ footer{
 
 
 .posting-screen{
-	height: 100%;
+	height: 100%; 
 	background-image: url($greengraphic);
-	background-size: 110% 120%;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
 }
 
 .input-mysize { 
@@ -875,8 +876,7 @@ input:checked + .slider:before {
 }
 
 .filter-row {
-	
-	
+	max-height: 100%;
 }
 
 /********************************** CALENDAR ********************************/
