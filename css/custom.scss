@@ -7,6 +7,7 @@
 $greengraphic: "../images/loginbg.jpg";
 $successgraphic: "../images/success.jpg";
 $registergraphic: "../images/register.jpg";
+$forgetimg: "../images/forget.jpg";
 
 
 /* Body Setup */
@@ -414,6 +415,20 @@ img.nextstepgo-logo-nav{
 
 .poweredby{
 	font-size: 12px;
+}
+
+
+/*************************** Password Reset *********************************/
+
+.forget-img{
+	background-image: url($forgetimg);
+	background-position: center;
+	background-size: cover;
+	min-height: 100%;
+}
+
+.login-link{
+	color: $maingreen;
 }
 
 

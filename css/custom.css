@@ -309,6 +309,16 @@ img.nextstepgo-logo-nav {
 .poweredby {
   font-size: 12px; }
 
+/*************************** Password Reset *********************************/
+.forget-img {
+  background-image: url("../images/forget.jpg");
+  background-position: center;
+  background-size: cover;
+  min-height: 100%; }
+
+.login-link {
+  color: #83bf4a; }
+
 /*************************** Register *********************************/
 .gearsimg {
   width: 80%;
