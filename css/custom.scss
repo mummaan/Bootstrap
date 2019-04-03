@@ -729,6 +729,27 @@ footer{
 /*************************** Postings *********************************/
 
 
+.badge-ltblue{
+	background-color: $ltblue;
+}
+
+.badge-maingreen{
+	background-color: $maingreen;
+}
+
+.due-date{
+	background-color: lighten($ltgrey, 10%);
+	
+}
+
+.unpublished{
+	background-color: $ltgrey!important;
+	color: black;
+	.due-date, .card-header{
+		background-color: darken($ltgrey, 10%)!important;
+	}
+}
+
 .d-none{
 	display: none;
 }

@@ -544,6 +544,21 @@ footer {
   display: none; }
 
 /*************************** Postings *********************************/
+.badge-ltblue {
+  background-color: #94c8d5; }
+
+.badge-maingreen {
+  background-color: #83bf4a; }
+
+.due-date {
+  background-color: #f2f2f4; }
+
+.unpublished {
+  background-color: #d6d7dd !important;
+  color: black; }
+  .unpublished .due-date, .unpublished .card-header {
+    background-color: #babcc6 !important; }
+
 .d-none {
   display: none; }
 

@@ -6,7 +6,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Job Opportunities</title>
+    <title>Scholarships</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
 
@@ -115,7 +115,7 @@
     <div class="dropdown-menu">
       <a class="dropdown-item" href="jobposting.html">Job Opportunity</a>
       <a class="dropdown-item" href="learnposting.html">Learning Opportunity</a>
-      <a class="dropdown-item" href="scholarshipposting.html">Scholarships</a>
+      <a class="dropdown-item" href="learnposting.html">Scholarship Opportunity</a>
     </div>
   </li>
               <li class="nav-item-side">
@@ -160,68 +160,23 @@
 						        </button>
 						      </div>
 						      <div class="modal-body">
-						      
-								 
-								  <!-- JOB FORM CONTENT -->
-								  <form id="postingFormJobEdit">
-									<h5 class="pt-4">Edit Post Details</h5>
+							   							       
+							   <!-- SCHOLARSHIP FORM CONTENT -->
+								  <form id="postingFormScholarEdit" >
+									<h5 class="pt-4">Edit Scholarship Details</h5>
 									  <div class="form-group">
-										<label for="Job Title">Job Title</label>
-										<input type="jobtitle" class="form-control" id="JobTitle" aria-describedby="JobTitle" placeholder="Enter">
+										<label for="scholtitle">Scholarship Name</label>
+										<input type="scholtitle" class="form-control" id="scholtitle" aria-describedby="scholtitle" >
+									  </div>
+									  <div class="form-group">
+										<label for="scholamount">Amount</label>
+										<input type="scholamount" class="form-control" id="scholamount" aria-describedby="scholamount" >
 									  </div>
 								  
-								  <div class="row pt-2 pb-3">
-								  	<div class="col">
-								 		 <label for="chooseJobType">Job Type</label>
-								  		 <select class="form-control w-75 mb-3" id="chooseJobType">
-											  <option>Part-Time</option>
-											  <option>Full Time</option>
-											  <option>Internship</option>
-								  		 </select>
-								    </div>
-								    <div class="col">
-									   <div class="form-group">
-											<label for="CareerCluster">Career Cluster</label>
-											<select class="form-control w-75" id="CareerCluster">
-											  <option>Select</option>
-											  <option>Agriculture, Food and Natural Resources</option>
-											  <option>Architecture and Construction</option>
-											  <option>Business Management and Administration</option>
-											  <option>Education and Training</option>
-											  <option>Finance</option>
-											  <option>Government and Public Administration</option>
-											  <option>Health Science</option>
-											  <option>Hospitality & Tourism</option>
-											  <option>Human Services</option>
-											  <option>Information Technology</option>
-											  <option>Law, Public Safety, Corrections and Security</option>
-											  <option>Manufacturing</option>
-											  <option>Marketing</option>
-											  <option>Science, Technology, Engineering and Mathematics</option>											 <option>Transportation, Distribution and Logistics</option>
-											</select>
-										  </div>
-									</div>
-									</div>  
-										<div class="form-group pt-1">
-											<label for="paymentType" class="mr-3 ">Payment Type: </label>
-									    	<div class="pt-2 d-inline">
-										    <div class="form-check form-check-inline" id="paymentType">
-										      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-										      <label class="form-check-label" for="inlineRadio1">Salaried</label>
-										    </div>
-										    <div class="form-check form-check-inline">
-										      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-										      <label class="form-check-label" for="inlineRadio2">Hourly</label>
-										    </div>
-										    <div class="form-check form-check-inline">
-										      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
-										      <label class="form-check-label" for="inlineRadio3">Unpaid</label>
-										    </div>
-											</div>
-									   </div>  									 
+														 
 									  	<div class="form-group">
- 										   <label for="exampleFormControlTextarea1">Edit Description</label>
- 										   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tell potential candidates about your posting. Be as descriptive as you can."></textarea>
+ 										   <label for="descSchol">Description</label>
+ 										   <textarea class="form-control" id="descSchol" rows="3" placeholder="Tell potential candidates about your posting. Be as descriptive as you can."></textarea>
 									  </div> 
 									  <div class="form-group">
 											  <h5 class="pt-4">Edit Application Deadline</h5>
@@ -293,7 +248,7 @@
 									  </div> 
 									
 							       </form>
-							 
+								  
 						      </div>
 						      <div class="modal-footer">
 						        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -328,53 +283,12 @@
 				
 				
 		<!---- Posting ---->
- 		 	<div class="card bg-white p-0 mt-3 jobCardTemplate" style="height: 40vh; display: none;">
+ 				<div class="card bg-white p-0 mt-3 jobCardTemplate" style="height: 40vh; display: none;">
  					
 					<div class="card-header data d-flex justify-content-between">
   						 <div>
-  						 <span><h4 class="mt-2">Part-Time Designer</h4></span> 
-  						 <span class="text-muted mr-1">Part Time</span><span>|</span><span class="ml-1 mr-1">Career Cluster</span><span>|</span><span class="ml-1 text-danger">Hourly Pay</span>
-						 </div>
-							 <div class="d-inline">
-								 <div class="d-inline mt-3 mr-2"><label class="switch">
-						 		 <input type="checkbox">
-						 		 <span class="slider round"></span>
-								</label></div>
-								
-								
-							  <!-- EDIT POST MODAL BTN -->
-								<button type="button" data-toggle="modal" class="p-0 new-event-btn" data-target="#editModal"><li class="list-group-item"><span class="edit-icon editicon"> <i data-feather="edit"></i></span></li></button>
- 					  
-  							    							  
-  							  <!--DELETE POST MODAL BTN -->
- 						      <button type="button" data-toggle="modal" class="btn deleteBtn" data-target="#deleteModal"><span class="x-icon xicon"> <i data-feather="x"></i></span></button>
- 						      
- 					
- 						      
- 						    </div> 					
-					  </div>
-					
-					<div class="card-body" id="posting1body">
-						<span class="navigation-icon editicon"> <i data-feather="navigation"></i></span>
-						<tr>
-   									   <td scope="row align-middle">
-   									   <h6 class="d-inline pt-2">Harrisonburg, Virginia </h6>
-										   <span><p class="submitted-text ml-4">Published 3/4/19 1:30 p.m.</p></span>
-   									   </td>
-						</tr>
-  						<p class="mt-2">We are seeking a part-time designer to work in our graphics deaprtment. Duties include designing promotional materials, posting to social media, and updating the company website. Experience in the Adobe Suite is preferred.</p>
-						
-						<p><b>Application Due: June 19, 2019</b></p>
-					</div>	
-  			   </div>
-				
-		<!---- Posting 2 ---->
-	 		 	<div class="card bg-white p-0 mt-3" style="height: 40vh;">
- 					
-					<div class="card-header data d-flex justify-content-between">
-  						 <div>
-  						 <span><h4 class="mt-2">Summer Intern</h4></span> 
-  						 <span class="text-muted mr-1">Part Time</span><span>|</span><span class="ml-1 mr-1">Career Cluster</span><span>|</span><span class="ml-1 text-danger">Unpaid</span>
+  						 <span><h4 class="mt-2">Ann Smith Memorial Need Based Scholarship</h4></span> 
+  						 <span class="text-muted mr-1">$1900</span>
 						 </div>
 							 <div class="d-inline">
 								 <div class="d-inline mt-3 mr-2"><label class="switch">
@@ -401,7 +315,46 @@
 										   <span><p class="submitted-text ml-4">Published 3/4/19 1:30 p.m.</p></span>
    									   </td>
 						</tr>
-  						<p class="mt-2">Our Summer Interns have the great experience of assisting our essential teams during the busy Summer months. You will get to meet tons of employees from a wide variety of fields.</p>
+  						<p class="mt-2">This scholarship is a need-based annual award for rising Freshmen in the Staunton area. Winners must be pursing a Bachelors degree at a 4 year institution.</p>
+						
+						<p><b>Application Due: August 21, 2019</b></p>
+					</div>	
+  			   </div> 
+				
+		<!---- Posting 2 ---->
+	 		 	<div class="card bg-white p-0 mt-3" style="height: 40vh;">
+ 					
+					<div class="card-header data d-flex justify-content-between">
+  						 <div>
+  						 <span><h4 class="mt-2">Disability in Science Scholarship</h4></span> 
+  						 <span class="text-muted mr-1">$2000</span>
+						 </div>
+							 <div class="d-inline">
+								 <div class="d-inline mt-3 mr-2"><label class="switch">
+						 		 <input type="checkbox">
+						 		 <span class="slider round"></span>
+								</label></div>
+								
+									
+							  <!-- EDIT POST MODAL BTN -->
+								<button type="button" data-toggle="modal" class="p-0 new-event-btn" data-target="#editModal"><li class="list-group-item"><span class="edit-icon editicon"> <i data-feather="edit"></i></span></li></button>
+ 					  
+  							    							  
+  							  <!--DELETE POST MODAL BTN -->
+ 						      <button type="button" data-toggle="modal" class="btn deleteBtn" data-target="#deleteModal"><span class="x-icon xicon"> <i data-feather="x"></i></span></button>
+						    
+ 						    </div> 					
+					  </div>
+					
+					<div class="card-body" id="posting1body">
+						<span class="navigation-icon editicon"> <i data-feather="navigation"></i></span>
+						<tr>
+   									   <td scope="row align-middle">
+   									   <h6 class="d-inline pt-2">Fairfax, Virginia </h6>
+										   <span><p class="submitted-text ml-4">Published 3/4/19 1:30 p.m.</p></span>
+   									   </td>
+						</tr>
+  						<p class="mt-2">The National Foundation for Science is looking to encourage young people with disabilites to break into STEM fields. a one-time $2000 award will be given to 30 applicants that display a true love for the sciences.</p>
 						
 						<p><b>Application Due: May 1, 2019</b></p>
 					</div>	
@@ -433,73 +386,30 @@
 						  <div class="modal-dialog modal-lg" role="document">
 						    <div class="modal-content">
 						      <div class="modal-header">
-						        <h5 class="modal-title" id="newPostModalLabel">New Job Opportunity</h5>
+						        <h5 class="modal-title" id="newPostModalLabel">New Scholarship</h5>
 						        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						          <span aria-hidden="true">&times;</span>
 						        </button>
 						      </div>
 						      <div class="modal-body">
 		
-								  <!-- JOB FORM CONTENT -->
-								  <form id="postingFormJob">
-									<h5 class="pt-4">Post Details</h5>
+								   							       
+							   <!-- SCHOLARSHIP FORM CONTENT -->
+								  <form id="postingFormScholar" >
+									<h5 class="pt-4">Scholarship Details</h5>
 									  <div class="form-group">
-										<label for="Job Title">Job Title</label>
-										<input type="jobtitle" class="form-control" id="JobTitle" aria-describedby="JobTitle" placeholder="Enter">
+										<label for="scholtitle">Scholarship Name</label>
+										<input type="scholtitle" class="form-control" id="scholtitle" aria-describedby="scholtitle" >
+									  </div>
+									  <div class="form-group">
+										<label for="scholamount">Amount</label>
+										<input type="scholamount" class="form-control" id="scholamount" aria-describedby="scholamount" >
 									  </div>
 								  
-								  <div class="row pt-2 pb-3">
-								  	<div class="col">
-								 		 <label for="chooseJobType">Job Type</label>
-								  		 <select class="form-control w-75 mb-3" id="chooseJobType">
-											  <option>Part-Time</option>
-											  <option>Full Time</option>
-											  <option>Internship</option>
-								  		 </select>
-								    </div>
-								    <div class="col">
-									   <div class="form-group">
-											<label for="CareerCluster">Career Cluster</label>
-											<select class="form-control w-75" id="CareerCluster">
-											  <option>Select</option>
-											  <option>Agriculture, Food and Natural Resources</option>
-											  <option>Architecture and Construction</option>
-											  <option>Business Management and Administration</option>
-											  <option>Education and Training</option>
-											  <option>Finance</option>
-											  <option>Government and Public Administration</option>
-											  <option>Health Science</option>
-											  <option>Hospitality & Tourism</option>
-											  <option>Human Services</option>
-											  <option>Information Technology</option>
-											  <option>Law, Public Safety, Corrections and Security</option>
-											  <option>Manufacturing</option>
-											  <option>Marketing</option>
-											  <option>Science, Technology, Engineering and Mathematics</option>											 <option>Transportation, Distribution and Logistics</option>
-											</select>
-										  </div>
-									</div>
-									</div>  
-										<div class="form-group pt-1">
-											<label for="paymentType" class="mr-3 ">Payment Type: </label>
-									    	<div class="pt-2 d-inline">
-										    <div class="form-check form-check-inline" id="paymentType">
-										      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-										      <label class="form-check-label" for="inlineRadio1">Salaried</label>
-										    </div>
-										    <div class="form-check form-check-inline">
-										      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-										      <label class="form-check-label" for="inlineRadio2">Hourly</label>
-										    </div>
-										    <div class="form-check form-check-inline">
-										      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" >
-										      <label class="form-check-label" for="inlineRadio3">Unpaid</label>
-										    </div>
-											</div>
-									   </div>  									 
+														 
 									  	<div class="form-group">
- 										   <label for="exampleFormControlTextarea1">Description</label>
- 										   <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Tell potential candidates about your posting. Be as descriptive as you can."></textarea>
+ 										   <label for="descSchol">Description</label>
+ 										   <textarea class="form-control" id="descSchol" rows="3" placeholder="Tell potential candidates about your posting. Be as descriptive as you can."></textarea>
 									  </div> 
 									  <div class="form-group">
 											  <h5 class="pt-4">Edit Application Deadline</h5>
@@ -571,8 +481,6 @@
 									  </div> 
 									
 							       </form>
-							       
-					
 								  
 						      </div>
 						      <div class="modal-footer">
