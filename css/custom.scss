@@ -237,6 +237,10 @@ img.nextstepgo-logo-nav{
 	color: white;
 }
 
+.offwhite-icon {
+	color: #d6d7dd;
+}
+
 .sidebartext-active {
 	color: #fff;
 }
@@ -573,6 +577,8 @@ footer{
 	margin-top: -5px;
 	vertical-align: middle;
 	background-color: $ltblue;
+	box-shadow: 5px 10px black;
+	
 }
 
 .view-app-btn{

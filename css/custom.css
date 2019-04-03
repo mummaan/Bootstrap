@@ -175,6 +175,9 @@ img.nextstepgo-logo-nav {
 .white-icon {
   color: white; }
 
+.offwhite-icon {
+  color: #d6d7dd; }
+
 .sidebartext-active {
   color: #fff; }
 
@@ -425,7 +428,8 @@ footer {
 .new-badge {
   margin-top: -5px;
   vertical-align: middle;
-  background-color: #94c8d5; }
+  background-color: #94c8d5;
+  box-shadow: 5px 10px black; }
 
 .view-app-btn {
   background-color: #83bf4a;
