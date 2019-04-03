@@ -172,7 +172,10 @@ img.nextstepgo-logo-nav {
 .sidebar-links {
   margin-top: 20px; }
 
-.sidebar-active2 {
+.white-icon {
+  color: white; }
+
+.sidebartext-active {
   color: #fff; }
 
 .sidebar-active {
