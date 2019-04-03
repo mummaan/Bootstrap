@@ -240,7 +240,7 @@ img.nextstepgo-logo-nav{
 }
 
 .edit-btn{
-	font-size: 10px;
+	font-size: 7px;
 	padding-top: 15px;
 	background-color: transparent!important;
 	border: none;
@@ -741,21 +741,67 @@ footer{
 
 .due-date{
 	background-color: lighten($ltgrey, 10%);
-	
 }
 
 .unpublished{
 	background-color: $ltgrey!important;
+	border: none;
 	color: black;
 	.due-date, .card-header{
-		background-color: darken($ltgrey, 10%)!important;
+		background-color: darken($ltgrey, 8%)!important;
 	}
+	.post-card-left{
+		background-color: rgba(189,189,189,1.00)!important;
+		color: $ltgrey!important;
+	}
+	.location-text{
+		color: black;
+	}
+}
+
+.post-card-left{
+	background-color: lighten($ltgrey, 10%);
+}
+
+.post-card-left-learn{
+	background-color: lighten($ltblue, 25%);
+}
+
+.location-text{
+	font-weight: 300;
 }
 
 .deleteBtn{
 	background-color: transparent;
 	border: none;
 	box-shadow: none;
+	margin-top:-2px;
+}
+
+.bg-mainblue{
+	background-color: $mainblue; 
+	color: white;
+	font-weight: 700;
+	border-bottom-left-radius: 4px;
+}
+
+.bg-teal{
+	background-color: $greenblue; 
+	color: white;
+	font-weight: 700;
+	border-bottom-left-radius: 4px;
+	line-height: 20px;
+}
+
+.bg-medblue{
+	background-color: $medblue; 
+	color: white;
+	font-weight: 700;
+	border-bottom-left-radius: 4px;
+}
+
+.job-post-title{
+	color: $mainblue;
 }
 
 .d-none{
@@ -787,8 +833,9 @@ footer{
 }
 
 .editicon {
-	color: $greenblue;
+	color: grey;
 }
+
 
 .xicon {
 	color: $dkgrey;
@@ -830,8 +877,14 @@ footer{
 }
 
 
+  #postings{
+		  float: right;
+		  display:flex;
+		flex-flow: row wrap;
+		  margin-left: 20%;	
+	  }
+
 .posting-screen{
-	height: 100%; 
 	background-image: url($greengraphic);
 	background-attachment: scroll;
 	background-repeat: no-repeat;
@@ -872,7 +925,7 @@ footer{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: $dkgrey;
   -webkit-transition: .4s;
   transition: .4s;
 }
