@@ -178,7 +178,9 @@ img.nextstepgo-logo-nav {
 
 .edit-btn {
   font-size: 10px;
-  padding-top: 15px; }
+  padding-top: 15px;
+  background-color: transparent !important;
+  border: none; }
 
 .btn-sign-out {
   height: 30px;
@@ -558,6 +560,11 @@ footer {
   color: black; }
   .unpublished .due-date, .unpublished .card-header {
     background-color: #babcc6 !important; }
+
+.deleteBtn {
+  background-color: transparent;
+  border: none;
+  box-shadow: none; }
 
 .d-none {
   display: none; }

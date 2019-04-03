@@ -242,6 +242,8 @@ img.nextstepgo-logo-nav{
 .edit-btn{
 	font-size: 10px;
 	padding-top: 15px;
+	background-color: transparent!important;
+	border: none;
 }
 
 .btn-sign-out{
@@ -748,6 +750,12 @@ footer{
 	.due-date, .card-header{
 		background-color: darken($ltgrey, 10%)!important;
 	}
+}
+
+.deleteBtn{
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
 }
 
 .d-none{
