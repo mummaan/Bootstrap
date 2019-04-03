@@ -25,7 +25,7 @@ body, html {
   border: 1px solid #0c293d !important;
   color: #0c293d; }
 
-.button {
+.signout-button {
   display: inline-block;
   border-radius: 5px;
   padding: .4rem .4rem;
@@ -35,22 +35,50 @@ body, html {
   color: #ffffff;
   font-family: proxima-nova, sans-serif;
   font-style: bold;
-  font-size: 12px;
+  font-size: 11px;
   cursor: pointer;
   text-align: center;
   transition: background 250ms ease-in-out,  transform 150ms ease;
   -webkit-appearance: none;
   -moz-appearance: none; }
 
-.button:hover,
-.button:focus {
+.signout-button:hover,
+.signout-button:focus {
   background: #307477; }
 
-.button:focus {
+.signout-button:focus {
   outline: 1px solid #fff;
   outline-offset: -4px; }
 
-.button:active {
+.signout-button:active {
+  transform: scale(0.99); }
+
+.viewapp-button {
+  display: inline-block;
+  border-radius: 5px;
+  padding: .4rem .9rem;
+  margin-top: 1;
+  text-decoration: none;
+  background: #83bf4a;
+  color: #ffffff;
+  font-family: proxima-nova, sans-serif;
+  font-style: bold;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,  transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.viewapp-button:hover,
+.viewapp-button:focus {
+  background: #6a933f; }
+
+.viewapp-button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px; }
+
+.viewapp-button:active {
   transform: scale(0.99); }
 
 /**************************** FONTS **************************/
@@ -155,7 +183,8 @@ img.nextstepgo-logo-nav {
   /* IE6-9 */
   max-width: 10px;
   padding: 0px;
-  margin-left: -10px; }
+  margin-left: -10px;
+  height: 565px; }
 
 .profile-img {
   border-radius: 100px;
@@ -201,7 +230,8 @@ img.nextstepgo-logo-nav {
     border-bottom: solid thin black; }
 
 .sidebar-links {
-  margin-top: 20px; }
+  margin-top: 3px;
+  margin-bottom: 3px; }
 
 .white-icon {
   color: white; }
@@ -474,9 +504,9 @@ footer {
     background-color: #51782b; }
 
 .collapse-icon {
-  color: #83bf4a; }
+  color: #9bce5f; }
   .collapse-icon:hover {
-    color: #51782b; }
+    color: #83bf4a; }
 
 .active-blue {
   color: #4584b5 !important; }
