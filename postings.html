@@ -24,7 +24,24 @@
 	  body{
 		  overflow: visible;
 	  }
+	  
+	  .navbar{
+		  position: sticky;
+		  position: -webkit-sticky;
+		  top: 0;
+		  left: 0;
+		  z-index: 100;
+	  }
+	  #collapse-it{
+		 position:fixed; 
+	height: 100%;
+	width:30%;
+	margin: 0px;  
+	  }
+	  
+	
 	 
+
   </style>
 
   </head>
@@ -33,9 +50,9 @@
 
 <!------------------- BODY ----------------------->
  
- <body>
+ <body class="posting-screen">
 	 
-	 <div class="posting-screen" style="height: 200vh;"> 
+	 <div> 
 	 
  <!-- NAVIGAION --> 
  <nav class="navbar navbar-expand-md navbar-light bg-light nav-dashboard">
@@ -83,7 +100,9 @@
       <div class="row vh-100">
        
       <!---------------- SIDEBAR BEGINS --------------->
+       
         <nav class="col-2 p-0 d-none d-md-block sidebar sidebar-expanded" id="collapse-it">
+            <div class="sidebar-inner position-sticky">
              <div class="profile-bar text-center">
              <table class="profile-table text-left">
   				<tr>
@@ -136,8 +155,8 @@
               </li>
             </ul>
          <div id="sidebar-btn"><i data-feather="arrow-left-circle"></i></div>
+			</div>
         </nav>
-        <div class="gradient-bar col"></div>
 	<!-------------------- SIDEBAR ENDS -------------------->
 		  
 		  
@@ -145,7 +164,7 @@
 		  
 		 <!---- Postings ---->
 		
-  		<div class="col-6 ml-3 mt-4" id="postings">
+  		<div class="col-6 mt-4" id="postings">
 
 		    <!-- Edit Modal -->
 					<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true">
@@ -532,7 +551,7 @@
 									        Are you sure you want to delete your post? This cannot be undone.
 									      </div>
 									      <div class="modal-footer">
-									        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+									        <button type="button" class="btn btn-secondary cancelDelete" data-dismiss="modal">Cancel</button>
 									        <button type="button" class="btn btn-primary confirmDelete">Delete Post</button>
 									      </div>
 									    </div>
@@ -542,87 +561,234 @@
 			<div class="posting-row">
 				
 				
-		<!---- Posting ---->
- 		 	<div class="card bg-white p-0 mt-3 jobCardTemplate" style="height: 40vh; display: none;">
- 					
-					<div class="card-header data d-flex justify-content-between">
-  						 <div>
-  						 <span><h4 class="mt-2">EXAMPLE 1</h4></span> 
-  						 <span class="text-muted mr-1">Part Time</span><span>|</span><span class="ml-1 mr-1">Career Cluster</span><span>|</span><span class="ml-1 text-danger">Hourly Pay</span>
-						 </div>
-							 <div class="d-inline">
-								 <div class="d-inline mt-3 mr-2"><label class="switch">
-						 		 <input type="checkbox">
-						 		 <span class="slider round"></span>
-								</label></div>
-								
-								
+		<!---- JOB POST TEMPLATE ---->
+		 	<div class="card bg-white p-0 mt-3 jobCardTemplate" style="height: 40vh; display: none;">
+			  <div class="row no-gutters h-100">
+			    <div class="col-md-4 d-flex align-items-start flex-column bd-highlight post-card-left post-card-left">
+			    
+  			<div class="p-4 bd-highlight">
+  			
+  				<h3 class="d-inline job-post-title">Part Time Marketing Assistant</h3><br>
+  				<div class="mt-3">
+  				<span class="navigation-icon editicon"> <i data-feather="navigation"></i></span>
+  						 <h6 class="d-inline location-text">Harrisonburg, Virginia </h6>
+  				</div>
+  			</div>
+  			
+  			<div class="p-2 bd-highlight"><div class="mt-0 ml-3">
+  						 <label class="switch align-top">
+								<input type="checkbox" class="d-block">
+						 		 <span class="slider round publish-toggle"></span>
+						 </label>
+								<p class="unpublished-text align-middle desc-text text-black-50" style="display:none;">Unpublished</p><p class="submitted-text align-middle published-text" style="display:block;">Published 3/4/19 1:30 p.m.</p>
+								</div></div>
+  			<div class="mt-auto w-100 bd-highlight bg-mainblue pl-1">
+ 					<div class="card-footer">
+ 						<i data-feather="briefcase" class="mr-2"></i>Job Posting
+  					</div>
+  			</div>
+		  </div>
+			    <div class="col-md-8 post-card-right">
+			      <div class="card-body">
+		        <div class="pt-0 justify-content-between d-flex w-100 mb-3">		
+		        			<div>
+		        				<span class="mr-1 badge badge-secondary">Part Time</span><span>|</span><span class=" badge badge-ltblue text-white ml-1 mr-1">Marketing</span><span>|</span><span class="ml-1 badge badge-maingreen text-white">Hourly Pay</span>						
+							</div>	
+						  	<div>
 							  <!-- EDIT POST MODAL BTN -->
-								<button type="button" data-toggle="modal" class="p-0 new-event-btn" data-target="#editModal"><li class="list-group-item"><span class="edit-icon editicon"> <i data-feather="edit"></i></span></li></button>
+								<button type="button" data-toggle="modal" class="p-0 new-event-btn edit-btn ml-4 mr-2 align-top" data-target="#editModal"><span class="edit-icon editicon"> <i data-feather="edit"></i></span></button>
  					  
   							    							  
   							  <!--DELETE POST MODAL BTN -->
- 						      <button type="button" data-toggle="modal" class="btn deleteBtn" data-target="#deleteModal"><span class="x-icon xicon"> <i data-feather="x"></i></span></button>
+ 						      <button type="button" data-toggle="modal" class="deleteBtn pl-0 align-top" data-target="#deleteModal"><span class="x-icon xicon"> <i data-feather="x"></i></span></button>
  						      
- 					
- 						      
- 						    </div> 					
-					  </div>
-					
-					<div class="card-body" id="posting1body">
-						<span class="navigation-icon editicon"> <i data-feather="navigation"></i></span>
-						<tr>
-   									   <td scope="row align-middle">
-   									   <h6 class="d-inline pt-2">Staunton, Virginia </h6>
-										   <span><p class="submitted-text ml-4">Published 3/4/19 1:30 p.m.</p></span>
-   									   </td>
-						</tr>
-  						<p class="mt-2">Assistant Manager responsibilities include monitoring inventory and ordering merchandise based on demand. You will also research competitive products and analyze consumer behavior to ensure our store meets and exceeds client expectations. Our ideal candidate will have retail…</p>
-						
-						<p><b>Application Due: May 1, 2019</b></p>
-					</div>	
-  			   </div>
-				
-		<!---- Posting 2 ---->
-	 		 	<div class="card bg-white p-0 mt-3" style="height: 40vh;">
- 					
-					<div class="card-header data d-flex justify-content-between">
-  						 <div>
-  						 <span><h4 class="mt-2">Assistant Manager</h4></span> 
-  						 <span class="text-muted mr-1">Part Time</span><span>|</span><span class="ml-1 mr-1">Career Cluster</span><span>|</span><span class="ml-1 text-danger">Hourly Pay</span>
-						 </div>
-							 <div class="d-inline">
-								 <div class="d-inline mt-3 mr-2"><label class="switch">
-						 		 <input type="checkbox">
-						 		 <span class="slider round"></span>
-								</label></div>
-								
-									
-							  <!-- EDIT POST MODAL BTN -->
-								<button type="button" data-toggle="modal" class="p-0 new-event-btn" data-target="#editModal"><li class="list-group-item"><span class="edit-icon editicon"> <i data-feather="edit"></i></span></li></button>
- 					  
-  							    							  
-  							  <!--DELETE POST MODAL BTN -->
- 						      <button type="button" data-toggle="modal" class="btn deleteBtn" data-target="#deleteModal"><span class="x-icon xicon"> <i data-feather="x"></i></span></button>
-						    
- 						    </div> 					
-					  </div>
-					
-					<div class="card-body" id="posting1body">
-						<span class="navigation-icon editicon"> <i data-feather="navigation"></i></span>
-						<tr>
-   									   <td scope="row align-middle">
-   									   <h6 class="d-inline pt-2">Staunton, Virginia </h6>
-										   <span><p class="submitted-text ml-4">Published 3/4/19 1:30 p.m.</p></span>
-   									   </td>
-						</tr>
-  						<p class="mt-2">Assistant Manager responsibilities include monitoring inventory and ordering merchandise based on demand. You will also research competitive products and analyze consumer behavior to ensure our store meets and exceeds client expectations. Our ideal candidate will have retail…</p>
-						
-						<p><b>Application Due: May 1, 2019</b></p>
-					</div>	
-  			   </div> 
- 		
+ 							</div>
+	        	</div>
+		        
+			        <p class="card-text">We're looking for a creative and motivated Marketing assistant to work in our Marketing and PR department. You will get to work with one of the best teams in the area and recieve great employee benefits.</p>
+			        <p class="card-text"><small class="text-muted">Application Due: May 20, 2019</small></p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
 
+ 		<!---- JOB POST EXAMPLE ---->
+		 	<div class="card bg-white p-0 mt-3" style="height: 40vh;">
+			  <div class="row no-gutters h-100">
+			    <div class="col-md-4 d-flex align-items-start flex-column bd-highlight post-card-left post-card-left">
+			    
+  			<div class="p-4 bd-highlight">
+  			
+  				<h3 class="d-inline job-post-title">Part Time Finance Analyst</h3><br>
+  				<div class="mt-3">
+  				<span class="navigation-icon editicon"> <i data-feather="navigation"></i></span>
+  						 <h6 class="d-inline location-text">Staunton, Virginia </h6>
+  				</div>
+  			</div>
+  			
+  			<div class="p-2 bd-highlight"><div class="mt-0 ml-3">
+  						 <label class="switch align-top">
+								<input type="checkbox" class="d-block">
+						 		 <span class="slider round publish-toggle"></span>
+						 </label>
+								<p class="unpublished-text align-middle desc-text text-black-50" style="display:none;">Unpublished</p><p class="submitted-text align-middle published-text" style="display:block;">Published 3/4/19 1:30 p.m.</p>
+								</div></div>
+  			<div class="mt-auto w-100 bd-highlight bg-mainblue pl-1">
+ 					<div class="card-footer">
+ 						<i data-feather="briefcase" class="mr-2"></i>Job Posting
+  					</div>
+  			</div>
+		  </div>
+			    <div class="col-md-8 post-card-right">
+			      <div class="card-body">
+		        <div class="pt-0 justify-content-between d-flex w-100 mb-3">		
+		        			<div>
+		        				<span class="mr-1 badge badge-secondary">Part Time</span><span>|</span><span class=" badge badge-ltblue text-white ml-1 mr-1">Finance</span><span>|</span><span class="ml-1 badge badge-maingreen text-white">Hourly Pay</span>						
+							</div>	
+						  	<div>
+							  <!-- EDIT POST MODAL BTN -->
+								<button type="button" data-toggle="modal" class="p-0 new-event-btn edit-btn ml-4 mr-2 align-top" data-target="#editModal"><span class="edit-icon editicon"> <i data-feather="edit"></i></span></button>
+ 					  
+  							    							  
+  							  <!--DELETE POST MODAL BTN -->
+ 						      <button type="button" data-toggle="modal" class="deleteBtn pl-0 align-top" data-target="#deleteModal"><span class="x-icon xicon"> <i data-feather="x"></i></span></button>
+ 						      
+ 							</div>
+	        	</div>
+		        
+			        <p class="card-text">Break into the workd of finance with this exciting new position. No experience required, our top-notch team will teach you everything you need to know about being a Finance Analyst and provide you great opportunities to learn about other jobs in Finance.</p>
+			        <p class="card-text"><small class="text-muted">Application Due: June 09, 2019</small></p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			
+		<!---- LEARNING OPPORTUNITY POST EXAMPLE ---->
+		 	<div class="card bg-white p-0 mt-3" style="height: 40vh;">
+			  <div class="row no-gutters h-100">
+			    <div class="col-md-4 d-flex align-items-start flex-column bd-highlight post-card-left post-card-left">
+			    
+  			<div class="p-4 bd-highlight">
+  			
+  				<h3 class="d-inline job-post-title">Architect Shadowing</h3><br>
+  				<div class="mt-3">
+  				<span class="navigation-icon editicon"> <i data-feather="navigation"></i></span>
+  						 <h6 class="d-inline location-text">Dayton, Virginia </h6>
+  				</div>
+  			</div>
+  			
+  			<div class="p-2 bd-highlight"><div class="mt-0 ml-3">
+  						 <label class="switch align-top">
+								<input type="checkbox" class="d-block">
+						 		 <span class="slider round publish-toggle"></span>
+						 </label>
+								<p class="unpublished-text align-middle desc-text text-black-50" style="display:none;">Unpublished</p><p class="submitted-text align-middle published-text" style="display:block;">Published 3/4/19 1:30 p.m.</p>
+								</div></div>
+  			<div class="mt-auto w-100 bd-highlight bg-medblue pl-1">
+ 					<div class="card-footer">
+ 					<table>
+ 					<tbody>
+ 						<tr>
+ 							<td>
+ 								<i data-feather="book" class="mr-2"></i>
+ 							</td>
+ 							<td>Learning Opportunity</td>
+ 						</tr>
+ 					</tbody>
+ 				</table>
+ 						
+  					</div>
+  			</div>
+		  </div>
+			    <div class="col-md-8 post-card-right">
+			      <div class="card-body">
+		        <div class="pt-0 justify-content-between d-flex w-100 mb-3">		
+		        			<div>
+		        				<span class="mr-1 badge badge-secondary">Part Time</span><span>|</span><span class=" badge badge-ltblue text-white ml-1 mr-1">Finance</span><span>|</span><span class="ml-1 badge badge-maingreen text-white">Hourly Pay</span>						
+							</div>	
+						  	<div>
+							  <!-- EDIT POST MODAL BTN -->
+								<button type="button" data-toggle="modal" class="p-0 new-event-btn edit-btn ml-4 mr-2 align-top" data-target="#editModal"><span class="edit-icon editicon"> <i data-feather="edit"></i></span></button>
+ 					  
+  							    							  
+  							  <!--DELETE POST MODAL BTN -->
+ 						      <button type="button" data-toggle="modal" class="deleteBtn pl-0 align-top" data-target="#deleteModal"><span class="x-icon xicon"> <i data-feather="x"></i></span></button>
+ 						      
+ 							</div>
+	        	</div>
+		        
+			        <p class="card-text">Break into the workd of finance with this exciting new position. No experience required, our top-notch team will teach you everything you need to know about being a Finance Analyst and provide you great opportunities to learn about other jobs in Finance.</p>
+			        <p class="card-text"><small class="text-muted">Application Due: June 09, 2019</small></p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+		<!---- SCHOLARSHIP POST EXAMPLE ---->
+		 	<div class="card bg-white p-0 mt-3" style="height: 40vh;">
+			  <div class="row no-gutters h-100">
+			    <div class="col-md-4 d-flex align-items-start flex-column bd-highlight post-card-left post-card-left">
+			    
+  			<div class="p-4 bd-highlight">
+  			
+  				<h3 class="d-inline job-post-title">Sarah Lee Memorial Scholarship</h3><br>
+  				<div class="mt-3">
+  				<span class="navigation-icon editicon"> <i data-feather="navigation"></i></span>
+  						 <h6 class="d-inline location-text">Harrisonburg, Virginia </h6>
+  				</div>
+  			</div>
+  			
+  			<div class="p-2 bd-highlight"><div class="mt-0 ml-3">
+  						 <label class="switch align-top">
+								<input type="checkbox" class="d-block">
+						 		 <span class="slider round publish-toggle"></span>
+						 </label>
+								<p class="unpublished-text align-middle desc-text text-black-50" style="display:none;">Unpublished</p><p class="submitted-text align-middle published-text" style="display:block;">Published 3/4/19 1:30 p.m.</p>
+								</div></div>
+  			<div class="mt-auto w-100 bd-highlight bg-teal pl-1">
+ 					<div class="card-footer">
+ 					<table>
+ 					<tbody>
+ 						<tr>
+ 							<td>
+ 								<i data-feather="dollar-sign" class="mr-2"></i>
+ 							</td>
+ 							<td>Scholarship</td>
+ 						</tr>
+ 					</tbody>
+ 				</table>
+ 						
+  					</div>
+  			</div>
+		  </div>
+			    <div class="col-md-8 post-card-right">
+			      <div class="card-body">
+		        <div class="pt-0 justify-content-between d-flex w-100 mb-3">		
+		        			<div>
+		        				<span class="mr-1 badge badge-secondary">One Time</span><span>|</span><span class="ml-1 badge badge-maingreen text-white">$1300</span>						
+							</div>	
+						  	<div>
+							  <!-- EDIT POST MODAL BTN -->
+								<button type="button" data-toggle="modal" class="p-0 new-event-btn edit-btn ml-4 mr-2 align-top" data-target="#editModal"><span class="edit-icon editicon"> <i data-feather="edit"></i></span></button>
+ 					  
+  							    							  
+  							  <!--DELETE POST MODAL BTN -->
+ 						      <button type="button" data-toggle="modal" class="deleteBtn pl-0 align-top" data-target="#deleteModal"><span class="x-icon xicon"> <i data-feather="x"></i></span></button>
+ 						      
+ 							</div>
+	        	</div>
+		        
+			        <p class="card-text">This one time award will be given to two local rising high school seniors who exibit a passion for serving their communities.</p>
+			        <p class="card-text"><small class="text-muted">Application Due: May 26, 2019</small></p>
+			      </div>
+			    </div>
+			  </div>
+			</div>
+
+
+ 		
+		
+		
 				
  		</div> 	<!---- Posting Row end div tag  ---->
 	</div>  <!---- Posting Col end div tag  ---->
@@ -631,7 +797,8 @@
 	
 			   <!---- Filter Card---->
 				
-					<div class="col-3 card bg-white ml-3 mt-5">
+					<div class="col-3 card bg-white ml-3 mt-5" style="
+    max-height:  100%;">
 						<div class="filter-row">
   						
 							<form class="search-form">

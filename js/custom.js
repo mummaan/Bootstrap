@@ -39,6 +39,9 @@ $("#unflip-btn").click(function(){
 			marginLeft: "-5px",
 			paddingBottom: "15px"
 		});
+		$( "#postings" ).animate({
+			marginLeft: "10%",
+		});
 		$( ".nav-txt" ).fadeOut("100");
 		$("#collapse-it").addClass("collapsed-sidebar");
 		$("#collapse-it").removeClass("sidebar-expanded");
@@ -85,6 +88,9 @@ $("#unflip-btn").click(function(){
     	}, 800 );
 		$( ".sidebar-active" ).css( "borderLeft", "solid thick #83bf4a" );
 		$( ".sidebar-active" ).css( "backgroundColor", "#525d69" );
+		$( "#postings" ).animate({
+			marginLeft: "20%",
+		});
 	}   
 	});
 	
