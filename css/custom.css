@@ -59,7 +59,9 @@ nav {
   color: #0c293d;
   font-weight: 400; }
   .nav-link:hover {
-    color: #83bf4a; }
+    color: white;
+    background-color: white, 0.1;
+    border-left: solid thick #83bf4a; }
 
 .nav-dropdown {
   background-color: transparent;
@@ -170,9 +172,12 @@ img.nextstepgo-logo-nav {
 .sidebar-links {
   margin-top: 20px; }
 
+.sidebar-active2 {
+  color: #fff; }
+
 .sidebar-active {
   border-left: solid thick #83bf4a;
-  background-color: #596672; }
+  background-color: rgba(255, 255, 255, 0.1); }
   .sidebar-active .nav-link {
     margin-left: -5px; }
 
@@ -184,8 +189,12 @@ img.nextstepgo-logo-nav {
 
 .btn-sign-out {
   height: 30px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 300; }
+
+.btnhover:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 11px 30px 0 rgba(0, 0, 0, 0.19);
+  color: white; }
 
 .collapsed-sidebar .sidebar-links {
   text-align: center; }

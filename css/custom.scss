@@ -98,7 +98,9 @@ nav{
 	color: $mainblue;
 	font-weight: 400;
 	&:hover {
-        color: $maingreen;
+        color: white;
+		background-color: white, 0.1; 
+		border-left: solid thick $maingreen;
     }
 }
 
@@ -231,9 +233,14 @@ img.nextstepgo-logo-nav{
 	margin-top: 20px;
 }
 
+.sidebar-active2 {
+	color: #fff;
+}
+
+
 .sidebar-active{
-	border-left: solid thick $maingreen;
-	background-color: lighten($dkgrey, 10%);
+  border-left: solid thick $maingreen;
+  background-color: rgba(255, 255, 255, 0.1);
 	.nav-link{
 		margin-left: -5px;
 	}
@@ -246,11 +253,16 @@ img.nextstepgo-logo-nav{
 	border: none;
 }
 
+
 .btn-sign-out{
 	height: 30px;
-	font-size: 13px;
+	font-size: 12px;
 	font-weight: 300;
-	
+}
+
+.btnhover:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 11px 30px 0 rgba(0,0,0,0.19);
+  color: white;
 }
 
 .sidebar-expanded{
