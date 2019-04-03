@@ -30,6 +30,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: forma-djr-text, sans-serif;
   font-weight: 700; }
 
+h2 {
+  color: #0c293d; }
+
 p {
   font-family: proxima-nova, sans-serif;
   font-weight: 300; }
@@ -429,7 +432,7 @@ footer {
   margin-top: -5px;
   vertical-align: middle;
   background-color: #94c8d5;
-  box-shadow: 5px 10px black; }
+  box-shadow: 2px 4px black, 10%; }
 
 .view-app-btn {
   background-color: #83bf4a;
