@@ -382,6 +382,11 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #6a9e38; }
 
+.btn-edit-profile {
+  color: #434c55; }
+  .btn-edit-profile:hover {
+    color: #35858e; }
+
 .card-body {
   min-height: 300px; }
 
@@ -431,8 +436,8 @@ footer {
 .new-badge {
   margin-top: -5px;
   vertical-align: middle;
-  background-color: #94c8d5;
-  box-shadow: 2px 4px black, 10%; }
+  background-color: #35858e;
+  box-shadow: 1px 1px grey; }
 
 .view-app-btn {
   background-color: #83bf4a;

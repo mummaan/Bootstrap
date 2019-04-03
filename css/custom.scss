@@ -117,6 +117,7 @@ nav{
     }
 }
 
+
 .profile-img-nav{
 	width: 30px;
 	border: thin solid $mainblue;
@@ -518,6 +519,13 @@ footer{
 /////////////
 
 
+.btn-edit-profile {
+	color: $dkgrey;
+	&:hover {
+		color: $greenblue;	
+	}
+}
+
 .card-body {
     min-height: 300px;
 }
@@ -580,8 +588,8 @@ footer{
 .new-badge{
 	margin-top: -5px;
 	vertical-align: middle;
-	background-color: $ltblue;
-	box-shadow: 2px 4px black, 10%;
+	background-color: $greenblue;
+	box-shadow: 1px 1px grey;
 	
 }
 
