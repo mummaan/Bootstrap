@@ -25,6 +25,34 @@ body, html {
   border: 1px solid #0c293d !important;
   color: #0c293d; }
 
+.button {
+  display: inline-block;
+  border-radius: 5px;
+  padding: .4rem .4rem;
+  margin: 0;
+  text-decoration: none;
+  background: #35858e;
+  color: #ffffff;
+  font-family: proxima-nova, sans-serif;
+  font-style: bold;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,  transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.button:hover,
+.button:focus {
+  background: #307477; }
+
+.button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px; }
+
+.button:active {
+  transform: scale(0.99); }
+
 /**************************** FONTS **************************/
 h1, h2, h3, h4, h5, h6 {
   font-family: forma-djr-text, sans-serif;
