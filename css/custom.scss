@@ -7,6 +7,7 @@
 $greengraphic: "../images/loginbg.jpg";
 $successgraphic: "../images/success.jpg";
 $registergraphic: "../images/register.jpg";
+$forgetimg: "../images/forget.jpg";
 
 
 /* Body Setup */
@@ -241,6 +242,8 @@ img.nextstepgo-logo-nav{
 .edit-btn{
 	font-size: 10px;
 	padding-top: 15px;
+	background-color: transparent!important;
+	border: none;
 }
 
 .btn-sign-out{
@@ -414,6 +417,20 @@ img.nextstepgo-logo-nav{
 
 .poweredby{
 	font-size: 12px;
+}
+
+
+/*************************** Password Reset *********************************/
+
+.forget-img{
+	background-image: url($forgetimg);
+	background-position: center;
+	background-size: cover;
+	min-height: 100%;
+}
+
+.login-link{
+	color: $maingreen;
 }
 
 
@@ -723,6 +740,33 @@ footer{
 
 /*************************** Postings *********************************/
 
+
+.badge-ltblue{
+	background-color: $ltblue;
+}
+
+.badge-maingreen{
+	background-color: $maingreen;
+}
+
+.due-date{
+	background-color: lighten($ltgrey, 10%);
+	
+}
+
+.unpublished{
+	background-color: $ltgrey!important;
+	color: black;
+	.due-date, .card-header{
+		background-color: darken($ltgrey, 10%)!important;
+	}
+}
+
+.deleteBtn{
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+}
 
 .d-none{
 	display: none;
