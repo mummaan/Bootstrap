@@ -25,6 +25,62 @@ body, html {
   border: 1px solid #0c293d !important;
   color: #0c293d; }
 
+.signout-button {
+  display: inline-block;
+  border-radius: 5px;
+  padding: .4rem .4rem;
+  margin: 0;
+  text-decoration: none;
+  background: #35858e;
+  color: #ffffff;
+  font-family: proxima-nova, sans-serif;
+  font-style: bold;
+  font-size: 11px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,  transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.signout-button:hover,
+.signout-button:focus {
+  background: #307477; }
+
+.signout-button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px; }
+
+.signout-button:active {
+  transform: scale(0.99); }
+
+.viewapp-button {
+  display: inline-block;
+  border-radius: 5px;
+  padding: .4rem .9rem;
+  margin-top: 1;
+  text-decoration: none;
+  background: #83bf4a;
+  color: #ffffff;
+  font-family: proxima-nova, sans-serif;
+  font-style: bold;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,  transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+.viewapp-button:hover,
+.viewapp-button:focus {
+  background: #6a933f; }
+
+.viewapp-button:focus {
+  outline: 1px solid #fff;
+  outline-offset: -4px; }
+
+.viewapp-button:active {
+  transform: scale(0.99); }
+
 /**************************** FONTS **************************/
 h1, h2, h3, h4, h5, h6 {
   font-family: forma-djr-text, sans-serif;
@@ -75,7 +131,7 @@ nav {
 
 .profile-img-nav {
   width: 30px;
-  border: thin solid #0c293d;
+  border: thin solid #35858e;
   border-radius: 20px;
   margin-top: 5px; }
 
@@ -127,7 +183,8 @@ img.nextstepgo-logo-nav {
   /* IE6-9 */
   max-width: 10px;
   padding: 0px;
-  margin-left: -10px; }
+  margin-left: -10px;
+  height: 565px; }
 
 .profile-img {
   border-radius: 100px;
@@ -173,7 +230,8 @@ img.nextstepgo-logo-nav {
     border-bottom: solid thin black; }
 
 .sidebar-links {
-  margin-top: 20px; }
+  margin-top: 3px;
+  margin-bottom: 3px; }
 
 .white-icon {
   color: white; }
@@ -382,6 +440,11 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
   background: #6a9e38; }
 
+.btn-edit-profile {
+  color: #434c55; }
+  .btn-edit-profile:hover {
+    color: #35858e; }
+
 .card-body {
   min-height: 300px; }
 
@@ -431,8 +494,8 @@ footer {
 .new-badge {
   margin-top: -5px;
   vertical-align: middle;
-  background-color: #94c8d5;
-  box-shadow: 2px 4px black, 10%; }
+  background-color: #35858e;
+  box-shadow: 1px 1px grey; }
 
 .view-app-btn {
   background-color: #83bf4a;
@@ -441,9 +504,9 @@ footer {
     background-color: #51782b; }
 
 .collapse-icon {
-  color: #83bf4a; }
+  color: #9bce5f; }
   .collapse-icon:hover {
-    color: #51782b; }
+    color: #83bf4a; }
 
 .active-blue {
   color: #4584b5 !important; }

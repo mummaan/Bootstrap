@@ -26,6 +26,9 @@ body, html {
   $ltgrey: #d6d7dd;
   $dkgrey: #434c55;
 
+
+
+
 /* Buttons */
 
 // Regular
@@ -54,6 +57,73 @@ body, html {
 	color: $mainblue;
 }
 
+
+.signout-button {
+    display: inline-block;
+    border-radius: 5px;
+    padding: .4rem .4rem;
+    margin: 0;
+    text-decoration: none;
+    background: $greenblue;
+    color: #ffffff;
+    font-family: proxima-nova, sans-serif;
+	font-style: bold;
+    font-size: 11px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.signout-button:hover,
+.signout-button:focus {
+    background: #307477;
+}
+
+.signout-button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.signout-button:active {
+    transform: scale(0.99);
+}
+
+
+.viewapp-button {
+    display: inline-block;
+    border-radius: 5px;
+    padding: .4rem .9rem;
+    margin-top: 1;
+    text-decoration: none;
+    background: $maingreen;
+    color: #ffffff;
+    font-family: proxima-nova, sans-serif;
+	font-style: bold;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, 
+                transform 150ms ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.viewapp-button:hover,
+.viewapp-button:focus {
+    background: #6a933f;
+}
+
+.viewapp-button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -4px;
+}
+
+.viewapp-button:active {
+    transform: scale(0.99);
+}
 
 
 /**************************** FONTS **************************/
@@ -117,9 +187,10 @@ nav{
     }
 }
 
+
 .profile-img-nav{
 	width: 30px;
-	border: thin solid $mainblue;
+	border: thin solid $greenblue;
 	border-radius: 20px;
 	margin-top: 5px;
 }
@@ -177,6 +248,7 @@ img.nextstepgo-logo-nav{
 	max-width: 10px;
 	padding: 0px;
 	margin-left: -10px;
+	height: 565px;
 }
 
 .profile-img{
@@ -234,7 +306,8 @@ img.nextstepgo-logo-nav{
 }
 
 .sidebar-links{
-	margin-top: 20px;
+	margin-top: 3px;
+	margin-bottom: 3px;
 }
 
 .white-icon {
@@ -518,6 +591,13 @@ footer{
 /////////////
 
 
+.btn-edit-profile {
+	color: $dkgrey;
+	&:hover {
+		color: $greenblue;	
+	}
+}
+
 .card-body {
     min-height: 300px;
 }
@@ -580,8 +660,8 @@ footer{
 .new-badge{
 	margin-top: -5px;
 	vertical-align: middle;
-	background-color: $ltblue;
-	box-shadow: 2px 4px black, 10%;
+	background-color: $greenblue;
+	box-shadow: 1px 1px grey;
 	
 }
 
@@ -594,9 +674,9 @@ footer{
 }
 
 .collapse-icon{
-	color: $maingreen;
+	color: #9bce5f;
 	&:hover{
-		color: darken($maingreen, 20%);
+		color: $maingreen;
 	}
 }
 

@@ -100,44 +100,14 @@ $(document).ready(function(){
 });
 	
 	
+
 	
-	//Every time #examplesearch is typed into
-	$("#examplesearch").on("keyup", function() {
-		
-              //Set all cards to display:none
-              $('#postings').css("display", "none");
-                
-			  //searchValue= #exampleSearch value
-              var searchValue = $(this).val();
-		
-			  // for each #postings AND .job-post-title...
-              $('#postings .job-post-title').each(function () {
-                
-				//text highlighter; transforms text to lowercase
-                var pageValue = $(this).text().toLowerCase();
-            
-				//#postings AND .job-post-title UHHHHHHHHHHHH??!??
-                $(this).toggle( !! $(this).text().toLowerCase().match(searchValue)).html(
-                    
-					//replace pageValue with...
-                    pageValue.replace(searchValue, function(match) {
-                    
-                            return '<mark>'+match+'</mark>'}, 'gi')
-                );
-				  
-				  
-            });
-              $("#postings").filter(function() {
-                //case-sensetive
-                $("#postings").toggle($(this).text().toLowerCase().indexOf(searchValue.toLowerCase()) > -1);
-              
-            // if (emptyPage == true){
-            //  $('.card').text('No postings found!');
-            //  //alert("No results found");
-            // }
-            
-            });
-            });
-	
+  $("#examplesearch").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $(".job-post-title").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+
 
 });
